@@ -11,6 +11,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.assignment.UnitEight.UnitEightActivity;
+import com.example.assignment.UnitFive.UnitFiveActivity;
+import com.example.assignment.UnitFour.UnitFourActivity;
+import com.example.assignment.UnitSeven.UnitSevenActivity;
+import com.example.assignment.UnitSix.UnitSixActivity;
 import com.example.assignment.UnitThree.UnitThreeActivity;
 import com.example.assignment.UnitTwo.UnitTwoActivity;
 import com.example.assignment.UnitOne.unitOne;
@@ -54,24 +59,7 @@ public class TextActivity extends AppCompatActivity {
         listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
         expListView.setAdapter(listAdapter);
 
-//        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-//
-//            @Override
-//            public boolean onChildClick(ExpandableListView parent, View v,
-//                                        int groupPosition, int childPosition, long id) {
-//
-//                // Handle click action, for example, navigate to another activity
-//                String selectedChild = (String) listAdapter.getChild(groupPosition, childPosition);
-//
-//                // Create an intent to navigate to another activity (replace SecondActivity with your activity class)
-//                Intent intent = new Intent(TextActivity.this, unitOne.class);
-//                // Pass any data to the new activity if needed
-//                intent.putExtra("childText", selectedChild);
-//                startActivity(intent);
-//
-//                return true; // Return true to indicate the click was handled
-//            }
-//        });
+
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
             @Override
@@ -85,12 +73,11 @@ public class TextActivity extends AppCompatActivity {
                 Intent intent = new Intent(TextActivity.this, getCorrespondingActivity(selectedUnit).getClass());
                 startActivity(intent);
 
-                return true; // Return true to indicate the click was handled
+                return true;
             }
         });
     }
 
-    // Helper method to return corresponding activity based on selected unit
     private AppCompatActivity getCorrespondingActivity(String selectedUnit) {
         switch (selectedUnit) {
             case "Unit-1 Introduction to Mobile Programming":
@@ -99,10 +86,18 @@ public class TextActivity extends AppCompatActivity {
                 return new UnitTwoActivity();
             case "Unit-3 Designing the User Interface":
                 return new UnitThreeActivity();
+            case "Unit-4 Android Activity":
+                return new UnitFourActivity();
+            case "Unit-5 Fragments, Menus and Dialogs":
+                return new UnitFiveActivity();
+            case "Unit-6 ListView,GridView and RecyclerView":
+                return new UnitSixActivity();
+            case "Unit-7 Advance Android Concepts":
+                return new UnitSevenActivity();
+            case "Unit-8 Introduction to ios Programming":
+                return new UnitEightActivity();
 
-            // Add cases for other units as needed
             default:
-                // Default to MainActivity if no corresponding activity found (optional)
                 return this;
         }
 
