@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +11,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.assignment.UnitOne.UnitThreeActivity;
-import com.example.assignment.UnitOne.UnitTwoActivity;
+import com.example.assignment.UnitThree.UnitThreeActivity;
+import com.example.assignment.UnitTwo.UnitTwoActivity;
 import com.example.assignment.UnitOne.unitOne;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;

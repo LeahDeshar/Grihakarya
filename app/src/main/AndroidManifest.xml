@@ -13,13 +13,25 @@
         android:theme="@style/Theme.Assignment"
         tools:targetApi="31">
         <activity
-            android:name=".UnitOne.UnitFourActivity"
+            android:name=".UnitSeven.UnitSevenActivity"
             android:exported="false" />
         <activity
-            android:name=".UnitOne.UnitThreeActivity"
+            android:name=".UnitSix.UnitSixActivity"
             android:exported="false" />
         <activity
-            android:name=".UnitOne.UnitTwoActivity"
+            android:name=".UnitFive.UnitFiveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UnitEight.UnitEightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UnitFour.UnitFourActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UnitThree.UnitThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UnitTwo.UnitTwoActivity"
             android:exported="false" />
         <activity
             android:name=".UnitOne.unitOne"
