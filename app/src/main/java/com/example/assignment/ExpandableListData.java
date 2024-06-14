@@ -14,9 +14,9 @@ public class ExpandableListData {
 
 
         List<String> group2 = new ArrayList<>();
-        group2.add("Item 2.1");
-        group2.add("Item 2.2");
-        group2.add("Item 2.3");
+        group2.add("Hello World");
+        group2.add("Assignment 1");
+//        group2.add("Item 2.3");
 
         expandableListDetail.put("Course", group1);
         expandableListDetail.put("Assignment", group2);

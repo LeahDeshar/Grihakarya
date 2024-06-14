@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,8 +35,7 @@ public class MainActivity extends AppCompatActivity {
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-//    private ListView listView;
-//    private String[] titles = {"Hello World", "Assignment:1", "Coming Soon"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,46 +47,14 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-//        listView = findViewById(R.id.listView);
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, titles);
-//        listView.setAdapter(adapter);
-//
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-//                String title = titles[position];
-//                Intent intent;
-//                switch (title) {
-//                    case "Hello World":
-//                         intent = new Intent(MainActivity.this, HelloWorldActivity.class);
-//                        intent.putExtra("title", title);
-//                        startActivity(intent);
-//                        break;
-//                    case "Assignment:1":
-//                         intent = new Intent(MainActivity.this, AssignmentDetailsActivity.class);
-//                        intent.putExtra("title", title);
-//                        startActivity(intent);
-//                        break;
-//                    case "Coming Soon":
-//                        intent = new Intent(MainActivity.this, TextActivity.class);
-//                        intent.putExtra("title", title);
-//                        startActivity(intent);
-//                        break;
-//                    default:
-//                        // Handle default case
-//                        break;
-//                }
-//            }
-//
-//        });
 
         expListView = (ExpandableListView) findViewById(R.id.expandableListView);
 
-        // preparing list data
+
         listDataHeader = new ArrayList<>();
         listDataChild = new HashMap<>();
 
-        // Adding child data
+
         listDataHeader.addAll(ExpandableListData.getData().keySet());
 
         // Adding child data
@@ -133,8 +101,13 @@ public class MainActivity extends AppCompatActivity {
                 return new UnitSevenActivity();
             case "Unit-8 Introduction to ios Programming":
                 return new UnitEightActivity();
+            case "Hello World":
+                return new HelloWorldActivity();
+            case "Assignment 1":
+                return new AssignmentDetailsActivity();
 
-            default:
+                default:
+                Toast.makeText(this, "No Screen", Toast.LENGTH_SHORT).show();
                 return this;
         }
 
