@@ -10,25 +10,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.assignment.UnitEight.UnitEightActivity;
 import com.example.assignment.UnitFive.UnitFiveActivity;
 import com.example.assignment.UnitFour.UnitFourActivity;
+import com.example.assignment.UnitOne.ViewPagerAdapter;
 import com.example.assignment.UnitSeven.UnitSevenActivity;
 import com.example.assignment.UnitSix.UnitSixActivity;
 import com.example.assignment.UnitThree.UnitThreeActivity;
 import com.example.assignment.UnitTwo.UnitTwoActivity;
 import com.example.assignment.UnitOne.unitOne;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class TextActivity extends AppCompatActivity {
-    ExpandableListAdapter listAdapter;
-    ExpandableListView expListView;
-    List<String> listDataHeader;
-    HashMap<String, List<String>> listDataChild;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,67 +41,28 @@ public class TextActivity extends AppCompatActivity {
             return insets;
         });
 
-//
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        ViewPager2 viewPager = findViewById(R.id.view_pager);
 
+        // Set up the adapter for ViewPager2
+        ViewPagerAdapter adapter = new ViewPagerAdapter(this);
+        viewPager.setAdapter(adapter);
 
-        expListView = (ExpandableListView) findViewById(R.id.expandableListView);
-
-        // preparing list data
-        listDataHeader = new ArrayList<>();
-        listDataChild = new HashMap<>();
-
-        // Adding child data
-        listDataHeader.addAll(ExpandableListData.getData().keySet());
-
-        // Adding child data
-        listDataChild.putAll(ExpandableListData.getData());
-
-        // setting list adapter
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
-        expListView.setAdapter(listAdapter);
-
-
-        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-
-                // Handle click action, for example, navigate to corresponding activity
-                String selectedUnit = listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition);
-
-                // Create an intent to navigate to the corresponding activity
-                Intent intent = new Intent(TextActivity.this, getCorrespondingActivity(selectedUnit).getClass());
-                startActivity(intent);
-
-                return true;
+        // Connect the TabLayout with ViewPager2
+        new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
+            switch (position) {
+                case 0:
+                    tab.setText("Unit 1");
+                    break;
+                case 1:
+                    tab.setText("Unit 2");
+                    break;
+                case 2:
+                    tab.setText("Unit 3");
+                    break;
+                // Add more cases as needed
             }
-        });
-    }
-
-    private AppCompatActivity getCorrespondingActivity(String selectedUnit) {
-        switch (selectedUnit) {
-            case "Unit-1 Introduction to Mobile Programming":
-                return new unitOne();
-            case "Unit-2 Introduction to Android Programming":
-                return new UnitTwoActivity();
-            case "Unit-3 Designing the User Interface":
-                return new UnitThreeActivity();
-            case "Unit-4 Android Activity":
-                return new UnitFourActivity();
-            case "Unit-5 Fragments, Menus and Dialogs":
-                return new UnitFiveActivity();
-            case "Unit-6 ListView,GridView and RecyclerView":
-                return new UnitSixActivity();
-            case "Unit-7 Advance Android Concepts":
-                return new UnitSevenActivity();
-            case "Unit-8 Introduction to ios Programming":
-                return new UnitEightActivity();
-
-            default:
-                return this;
-        }
-
+        }).attach();
 
     }
 }

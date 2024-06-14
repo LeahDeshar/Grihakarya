@@ -105,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
                 return new HelloWorldActivity();
             case "Assignment 1":
                 return new AssignmentDetailsActivity();
+            case "Example":
+                return new TextActivity();
+
 
                 default:
                 Toast.makeText(this, "No Screen", Toast.LENGTH_SHORT).show();

@@ -30,4 +30,6 @@ ConstraintLayout is preferred over other layouts like RelativeLayout or
 Its part of the AndroidX library and supports features like chains, guidelines,
             barriers, and more for advanced layout designs.</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
