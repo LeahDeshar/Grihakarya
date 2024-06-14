@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Android Basics</string>
+    <string name="array_title">Things To Know</string>
+    <string name="notes">Explanation</string>
+    <string-array name="titles_array">
+        <item>TextView</item>
+        <item>Image View</item>
+        <item>Layout: ConstraintLayout</item>
+    </string-array>
+    <string-array name="exp_array">
+        <item>A TextView is a widget used to display text in an Android application.
+            Its one of the most commonly used UI elements in Android apps for displaying
+            labels, messages, instructions, etc.TextView can be customized in terms of
+            text size, color, font style, alignment, and more.</item>
+        <item>An ImageView is a widget used to display images in an Android application.
+Its used when you want to show images such as icons, photos, logos, etc., in your apps UI.
+ImageView can load images from various sources like drawable resources, assets, URLs, etc.
+It supports various scale types (e.g., centerCrop, fitXY, fitCenter)
+            to control how the image is displayed within the ImageView bounds.
+Like TextView, ImageView is also a subclass of the View class and can be
+            added to layout XML files or created dynamically in code.</item>
+        <item>ConstraintLayout is a flexible layout manager in
+            Android used to create complex and responsive UI designs.
+It allows you to create layouts by positioning and aligning views relative
+            to each other or relative to the parent layout.
+Views within a ConstraintLayout are connected or constrained to each other using constraints.
+Constraints define the position, size, and alignment of views within the layout.
+ConstraintLayout is preferred over other layouts like RelativeLayout or
+            LinearLayout for its flexibility, performance, and ease of creating responsive UIs.
+Its part of the AndroidX library and supports features like chains, guidelines,
+            barriers, and more for advanced layout designs.</item>
+    </string-array>
+</resources>
