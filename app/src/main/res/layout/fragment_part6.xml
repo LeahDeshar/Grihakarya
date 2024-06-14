@@ -11,7 +11,7 @@ android:layout_height="match_parent">
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UnitThree.Part4Fragment">
+    tools:context=".UnitThree.Part6Fragment">
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,7 +20,7 @@ android:layout_height="match_parent">
         android:layout_marginTop="30dp"
         android:textStyle="bold"
         android:textSize="25sp"
-        android:text="TableLayout" />
+        android:text="ConstraintLayout" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,35 +30,30 @@ android:layout_height="match_parent">
         android:letterSpacing="0.04"
         android:lineSpacingExtra="3dp"
         android:justificationMode="inter_word"
-        android:text="`TableLayout` is a ViewGroup that arranges its child views into rows and columns, similar to an HTML table. Each row in a TableLayout is defined by a TableRow element. It is useful when you need to display data in a tabular format." />
+        android:text="`ConstraintLayout` is a ViewGroup that allows you to create large and complex layouts with a flat view hierarchy (no nested view groups). It provides a flexible way of creating layouts by specifying the relationships between its child views using constraints." />
 
-    <ImageView
-        android:layout_width="330dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="296dp"
-        android:layout_marginTop="170dp"
-        android:src="@drawable/table" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="175dp"
         android:padding="16dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TableLayout Attributes"
+            android:text="ConstraintLayout Attributes"
             android:textStyle="bold"
             android:textSize="18sp"
             android:paddingBottom="8dp" />
 
-        <!-- StretchColumns Attribute -->
+        <!-- Layout Constraints -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="&#8226; StretchColumns Attribute:"
+            android:text="&#8226; Layout Constraints:"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
@@ -66,16 +61,23 @@ android:layout_height="match_parent">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="- android:stretchColumns: Specifies which columns should be stretched to fill the available space. Columns are indexed starting from 0."
+            android:text="- android:layout_constraintTop_toTopOf: Positions the top edge of this view to the top edge of another view."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- android:layout_constraintBottom_toBottomOf: Positions the bottom edge of this view to the bottom edge of another view."
             android:textSize="16sp"
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
-        <!-- ShrinkColumns Attribute -->
+        <!-- Bias Attribute -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="&#8226; ShrinkColumns Attribute:"
+            android:text="&#8226; Bias Attribute:"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
@@ -83,16 +85,23 @@ android:layout_height="match_parent">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="- android:shrinkColumns: Specifies which columns should be shrunk to fit their content."
+            android:text="- android:layout_constraintHorizontal_bias: Adjusts the horizontal bias (position) of the view between two constraints."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- android:layout_constraintVertical_bias: Adjusts the vertical bias (position) of the view between two constraints."
             android:textSize="16sp"
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
-        <!-- CollapseColumns Attribute -->
+        <!-- Chains Attribute -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="&#8226; CollapseColumns Attribute:"
+            android:text="&#8226; Chains Attribute:"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
@@ -100,11 +109,17 @@ android:layout_height="match_parent">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="- android:collapseColumns: Specifies which columns should be collapsed, meaning their visibility can be toggled."
+            android:text="- android:layout_constraintHorizontal_chainStyle: Defines the style of a horizontal chain (spread, spread_inside, packed)."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- android:layout_constraintVertical_chainStyle: Defines the style of a vertical chain (spread, spread_inside, packed)."
             android:textSize="16sp"
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
-
 
 
     </LinearLayout>
