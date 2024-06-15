@@ -10,7 +10,6 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.assignment.R;
-import com.example.assignment.UnitThree.ViewPagerAdapter;
 
 public class UnitTwoActivity extends AppCompatActivity {
 
@@ -28,7 +27,7 @@ public class UnitTwoActivity extends AppCompatActivity {
         ViewPager2 viewPager = findViewById(R.id.view_pager);
 
         // Set up the adapter for ViewPager2
-        ViewPagerAdapter adapter = new ViewPagerAdapter(this);
+        UnitTwoViewPagerAdapter adapter = new UnitTwoViewPagerAdapter(this);
         viewPager.setAdapter(adapter);
     }
 }

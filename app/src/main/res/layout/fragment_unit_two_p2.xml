@@ -1,14 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UnitTwo.unitTwoP2Fragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Title -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tutorial: Understanding AndroidManifest.xml"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
 
+    <!-- What is Manifest File -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is AndroidManifest.xml?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The AndroidManifest.xml file is a crucial part of an Android application. It provides essential information about the application to the Android system, such as its components, permissions required, hardware requirements, and more."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Adding Activity to Manifest -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adding Activity to Manifest"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To add an activity to AndroidManifest.xml, you need to declare it within the <application> element. Each activity is defined with its name attribute specifying the class and other optional attributes like intent filters."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Example: Adding MainActivity -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example: Adding MainActivity"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here's how you add MainActivity to AndroidManifest.xml:"
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="<activity android:name=\".MainActivity\">"
+    android:textSize="16sp"
+    android:textColor="@color/colorAccent"
+    android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   <intent-filter>"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="       <action android:name=\"android.intent.action.MAIN\" />"
+    android:textSize="16sp"
+    android:textColor="@color/colorAccent"
+    android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="       <category android:name=\"android.intent.category.LAUNCHER\" />"
+    android:textSize="16sp"
+    android:textColor="@color/colorAccent"
+    android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   </intent-filter>"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="</activity>"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>
 </FrameLayout>
+</ScrollView>
