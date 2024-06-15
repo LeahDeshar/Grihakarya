@@ -31,7 +31,7 @@ android:layout_height="match_parent">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:textStyle="bold"
         android:textSize="25sp"
         android:text="Brands, Models, and Platforms of Mobile Devices" />
@@ -40,9 +40,10 @@ android:layout_height="match_parent">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginHorizontal="20dp"
 
-        android:padding="16dp">
+        >
 
         <!-- Brands -->
         <TextView
@@ -189,7 +190,6 @@ android:layout_height="match_parent">
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -197,6 +197,177 @@ android:layout_height="match_parent">
             android:textSize="16sp"
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Following is the list of Android versions:"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1,2,3"
+            android:background="#CCCCCC">
+
+            <!-- Table Header -->
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#AAAAAA">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Version Name"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:background="#AAAAAA" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Version Number"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:background="#AAAAAA" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Initial Release Date"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:background="#AAAAAA" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Api Level"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:background="#AAAAAA" />
+            </TableRow>
+
+            <!-- Table Rows -->
+            <TableRow>
+                <TextView android:text="No version name" android:padding="8dp" />
+                <TextView android:text="1.0" android:padding="8dp" />
+                <TextView android:text="September 23, 2008" android:padding="8dp" />
+                <TextView android:text="1" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="No version name" android:padding="8dp" />
+                <TextView android:text="1.1" android:padding="8dp" />
+                <TextView android:text="February 9, 2009"
+                    android:padding="8dp" android:layout_width="wrap_content" />
+                <TextView android:text="2" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Cupcake" android:padding="8dp" />
+                <TextView android:text="1.5" android:padding="8dp" />
+                <TextView android:text="April 27, 2009" android:padding="8dp" />
+                <TextView android:text="3" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Donut" android:padding="8dp" />
+                <TextView android:text="1.6" android:padding="8dp" />
+                <TextView android:text="September 15, 2009" android:padding="8dp" />
+                <TextView android:text="4" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Eclair" android:padding="8dp" />
+                <TextView android:text="2.0 – 2.1" android:padding="8dp" />
+                <TextView android:text="October 26, 2009" android:padding="8dp" />
+                <TextView android:text="5 – 7" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Froyo" android:padding="8dp" />
+                <TextView android:text="2.2 – 2.2.3" android:padding="8dp" />
+                <TextView android:text="May 20, 2010" android:padding="8dp" />
+                <TextView android:text="8" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Gingerbread" android:padding="8dp" />
+                <TextView android:text="2.3 – 2.3.7" android:padding="8dp" />
+                <TextView android:text="December 6, 2010" android:padding="8dp" />
+                <TextView android:text="9 – 10" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Honeycomb" android:padding="8dp" />
+                <TextView android:text="3.0 – 3.2.6" android:padding="8dp" />
+                <TextView android:text="February 22, 2011" android:padding="8dp" />
+                <TextView android:text="11 – 13" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Ice Cream Sandwich" android:padding="8dp" />
+                <TextView android:text="4.0 – 4.0.4" android:padding="8dp" />
+                <TextView android:text="October 18, 2011" android:padding="8dp" />
+                <TextView android:text="14 – 15" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Jelly Bean" android:padding="8dp" />
+                <TextView android:text="4.1 – 4.3.1" android:padding="8dp" />
+                <TextView android:text="July 9, 2012" android:padding="8dp" />
+                <TextView android:text="16 – 18" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="KitKat" android:padding="8dp" />
+                <TextView android:text="4.4 – 4.4.4" android:padding="8dp" />
+                <TextView android:text="October 31, 2013" android:padding="8dp" />
+                <TextView android:text="19 – 20" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Lollipop" android:padding="8dp" />
+                <TextView android:text="5.0 – 5.1.1" android:padding="8dp" />
+                <TextView android:text="November 12, 2014" android:padding="8dp" />
+                <TextView android:text="21 – 22" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Marshmallow" android:padding="8dp" />
+                <TextView android:text="6.0 – 6.0.1" android:padding="8dp" />
+                <TextView android:text="October 5, 2015" android:padding="8dp" />
+                <TextView android:text="23" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Nougat" android:padding="8dp" />
+                <TextView android:text="7.0 – 7.1.2" android:padding="8dp" />
+                <TextView android:text="August 22, 2016" android:padding="8dp" />
+                <TextView android:text="24 – 25" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Oreo" android:padding="8dp" />
+                <TextView android:text="8.0 – 8.1" android:padding="8dp" />
+                <TextView android:text="August 21, 2017" android:padding="8dp" />
+                <TextView android:text="26 – 27" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Pie" android:padding="8dp" />
+                <TextView android:text="9.0" android:padding="8dp" />
+                <TextView android:text="August 6, 2018" android:padding="8dp" />
+                <TextView android:text="28" android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Android 10" android:padding="8dp" />
+                <TextView android:text="10.0" android:padding="8dp" />
+                <TextView android:text="September 3, 2019" android:padding="8dp" />
+                <TextView android:text="29" android:padding="8dp" />
+            </TableRow>
+
+        </TableLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+
 
         <!-- HarmonyOS -->
         <TextView
