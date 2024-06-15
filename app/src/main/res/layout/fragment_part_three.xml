@@ -1,16 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UnitOne.PartThreeFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Major Development Approaches"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Native Mobile Applications -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Native Mobile Applications"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="8dp"
-        android:text="part three"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:text="Native mobile applications are developed specifically for a particular operating system, such as Android or iOS. These apps are built using platform-specific languages and tools. For Android, developers typically use Java or Kotlin, while for iOS, they use Swift or Objective-C. Native apps provide the best performance and user experience as they can fully leverage the device's hardware and software capabilities."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp" />
 
+    <!-- Cross-Platform Native Mobile Applications -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Cross-Platform Native Mobile Applications"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cross-platform native mobile applications are designed to work on multiple operating systems using a single codebase. Tools such as React Native and Flutter allow developers to write code once and deploy it on both Android and iOS platforms. These apps offer near-native performance and can access native APIs, providing a balance between development efficiency and performance."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Hybrid Mobile Applications -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Hybrid Mobile Applications"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hybrid mobile applications are built using web technologies such as HTML, CSS, and JavaScript. These apps run inside a native container, allowing them to be installed on devices like native apps. Frameworks such as Apache Cordova and Ionic enable the development of hybrid apps. While they offer easier development and maintenance, hybrid apps may not perform as well as native or cross-platform native apps due to their reliance on web views."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Progressive Web Applications -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Progressive Web Applications"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progressive Web Applications (PWAs) are web applications that provide an app-like experience using modern web capabilities. They can be accessed through a web browser and installed on the home screen of a device, offering offline functionality, push notifications, and faster loading times. PWAs are built using standard web technologies and are highly flexible, but they may not have access to all native features of the device."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android Activity Lifecycle"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Image -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+
+        android:src="@drawable/lifecycle"
+        android:contentDescription="Android Activity Lifecycle Diagram"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Explanation -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&#8226; The mobile front-end is the visual and interactive part of the application the user
+experiences. It usually resides on the device, or there is at least an icon representing
+the app that is visible on the home screen or is pinned in the application catlog of the
+device. The application can be downloaded from the platform app store, side-loaded
+directly onto the device, or can be reached through the device's browser."
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="4dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&#8226; Regardless of what front-end platform or development methodology is being used,
+delivering high-quality mobile applications that delight and retain users requires
+reliable back-end services."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&#8226; Given the critical importance of back-end services for the success of the mobile
+application, the developers have several important architectural decisions that they
+must consider. These decisions include which services should they build themselves
+and which third party services should they leverage, and then should they run and
+maintain their own services or should they take advantage of 3rd party services."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
 </FrameLayout>
+</ScrollView>
