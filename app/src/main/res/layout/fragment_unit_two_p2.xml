@@ -96,7 +96,7 @@ android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="       &lt;action android:name=&quot;android.intent.action.MAIN&quot;&gt;"
+        android:text="       &lt;action android:name=&quot;android.intent.action.MAIN&quot;/&gt;"
     android:textSize="16sp"
     android:textColor="#615F5F"
     android:layout_marginBottom="8dp" />
@@ -104,7 +104,7 @@ android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="       &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;&gt;"
+        android:text="       &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;/&gt;"
     android:textSize="16sp"
     android:textColor="#615F5F"
     android:layout_marginBottom="8dp" />
@@ -112,7 +112,7 @@ android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="   &lt;intent-filter&gt;"
+        android:text="   &lt;/intent-filter&gt;"
         android:textSize="16sp"
         android:textColor="#615F5F"
         android:layout_marginBottom="8dp" />
@@ -120,7 +120,7 @@ android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="   &lt;activity&gt;"
+        android:text="   &lt;/activity&gt;"
         android:textSize="16sp"
         android:textColor="#615F5F"
         android:layout_marginBottom="16dp" />
@@ -232,6 +232,119 @@ android:layout_height="match_parent">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="&lt;activity&gt;"
+        android:textSize="16sp"
+        android:textColor="#615F5F"
+        android:layout_marginBottom="16dp" />
+
+
+
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tutorial: Creating String Resources"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- What are String Resources -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What are String Resources?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="String resources are XML files located in the res/values/ directory of your Android project. They allow you to define strings that can be reused throughout your application, ensuring consistency and ease of localization."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- How to Create String Resources -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How to Create String Resources"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To create string resources, follow these steps:"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Step 1: Navigate to strings.xml -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 1: Navigate to strings.xml"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open res/values/strings.xml file in your Android project."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Step 2: Add String Resource -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 2: Add String Resource"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inside strings.xml, add a new &lt;string&gt; element with a name attribute as follows:"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;string name=&quot;hello_message&quot;&gt;Hello, World!&lt;/string&gt;"
+    android:textSize="16sp"
+    android:textColor="#615F5F"
+    android:layout_marginBottom="16dp" />
+
+    <!-- Step 3: Use String Resource -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Step 3: Use String Resource"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In your layout XML or Java code, reference the string resource using @string/ prefix:"
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
         android:textSize="16sp"
         android:textColor="#615F5F"
         android:layout_marginBottom="16dp" />
