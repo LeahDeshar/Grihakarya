@@ -55,7 +55,7 @@ android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="To add an activity to AndroidManifest.xml, you need to declare it within the <application> element. Each activity is defined with its name attribute specifying the class and other optional attributes like intent filters."
+        android:text="To add an activity to AndroidManifest.xml, you need to declare it within the &lt;application&gt; element. Each activity is defined with its name attribute specifying the class and other optional attributes like intent filters."
         android:textSize="16sp"
         android:lineSpacingExtra="4dp"
         android:layout_marginBottom="16dp" />
@@ -80,51 +80,161 @@ android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="<activity android:name=\".MainActivity\">"
+        android:text="&lt;activity android:name=&quot;.MainActivity&quot;&gt;"
     android:textSize="16sp"
-    android:textColor="@color/colorAccent"
+    android:textColor="#615F5F"
     android:layout_marginBottom="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="   <intent-filter>"
+        android:text="   &lt;intent-filter&gt;"
         android:textSize="16sp"
-        android:textColor="@color/colorAccent"
+        android:textColor="#615F5F"
         android:layout_marginBottom="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="       <action android:name=\"android.intent.action.MAIN\" />"
+        android:text="       &lt;action android:name=&quot;android.intent.action.MAIN&quot;&gt;"
     android:textSize="16sp"
-    android:textColor="@color/colorAccent"
+    android:textColor="#615F5F"
     android:layout_marginBottom="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="       <category android:name=\"android.intent.category.LAUNCHER\" />"
+        android:text="       &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;&gt;"
     android:textSize="16sp"
-    android:textColor="@color/colorAccent"
+    android:textColor="#615F5F"
     android:layout_marginBottom="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="   </intent-filter>"
+        android:text="   &lt;intent-filter&gt;"
         android:textSize="16sp"
-        android:textColor="@color/colorAccent"
+        android:textColor="#615F5F"
         android:layout_marginBottom="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="</activity>"
+        android:text="   &lt;activity&gt;"
         android:textSize="16sp"
-        android:textColor="@color/colorAccent"
+        android:textColor="#615F5F"
         android:layout_marginBottom="16dp" />
 
+
+
+    <!-- Title -->
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tutorial: Understanding Intent-Filter for Activities"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- What is Intent-Filter -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is Intent-Filter?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="An intent-filter is a sub-element of the &lt;activity&gt; tag in the AndroidManifest.xml file. It specifies the types of intents that an activity, service, or broadcast receiver can respond to. It acts as a filter to declare what kinds of intents your component can handle."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Role of Intent-Filter -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Role of Intent-Filter for Activities"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The intent-filter for an activity defines the kinds of intents that the activity can handle. It specifies the actions and categories of intents that the activity is capable of responding to. This is particularly important for activities that serve as entry points into your application, such as those that respond to ACTION_MAIN and CATEGORY_LAUNCHER."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Example: Adding Intent-Filter to MainActivity -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example: Adding Intent-Filter to MainActivity"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heres how you can add an intent-filter to MainActivity in AndroidManifest.xml:"
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;activity android:name=&quot;.MainActivity&quot;&gt;"
+        android:textSize="16sp"
+        android:textColor="#615F5F"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   &lt;intent-filter&gt;"
+        android:textSize="16sp"
+        android:textColor="#615F5F"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="       &lt;action android:name=&quot;android.intent.action.MAIN&quot; &gt;"
+        android:textSize="16sp"
+        android:textColor="#615F5F"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="       &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;&gt;"
+        android:textSize="16sp"
+        android:textColor="#615F5F"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   &lt;intent-filter&gt;"
+        android:textSize="16sp"
+        android:textColor="#615F5F"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;activity&gt;"
+        android:textSize="16sp"
+        android:textColor="#615F5F"
+        android:layout_marginBottom="16dp" />
 </LinearLayout>
 </FrameLayout>
 </ScrollView>
