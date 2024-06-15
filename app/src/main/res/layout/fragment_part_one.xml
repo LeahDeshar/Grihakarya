@@ -216,9 +216,16 @@ android:layout_height="match_parent">
             android:justificationMode="inter_word"
             android:text="- Implementing security measures to protect user data and privacy."
             android:textSize="16sp"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categories of Mobile Devices"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="8dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -240,6 +247,8 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:text="- Basic phones with limited functionality, often focused on voice calls, text messaging, and basic features like a simple camera and FM radio."
             android:textSize="16sp"
+            android:justificationMode="inter_word"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
@@ -256,6 +265,8 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:text="- Phones that offer a balance of performance and cost, typically including better cameras, larger screens, and more advanced features compared to low-end devices."
             android:textSize="16sp"
+            android:justificationMode="inter_word"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
@@ -272,6 +283,8 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:text="- Premium phones with the latest technology, high-resolution displays, advanced cameras, powerful processors, and extensive features."
             android:textSize="16sp"
+            android:justificationMode="inter_word"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
@@ -297,6 +310,8 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:text="- Affordable smartphones with basic features suitable for essential tasks like calling, texting, internet browsing, and running basic apps."
             android:textSize="16sp"
+            android:justificationMode="inter_word"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
@@ -313,6 +328,8 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:text="- Devices that offer a good balance of performance and cost, featuring decent cameras, processors, and build quality, suitable for most users."
             android:textSize="16sp"
+            android:justificationMode="inter_word"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
@@ -329,6 +346,8 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:text="- Flagship devices with top-of-the-line specifications, high-quality materials, the latest processors, superior cameras, and advanced features like 5G connectivity and high-refresh-rate displays."
             android:textSize="16sp"
+            android:justificationMode="inter_word"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
@@ -354,6 +373,8 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:text="- Larger touch-screen devices designed for web browsing, media consumption, gaming, and productivity tasks. Tablets can range from basic models to high-end versions with powerful processors and advanced features."
             android:textSize="16sp"
+            android:justificationMode="inter_word"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
@@ -370,6 +391,8 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:text="- Specialized devices for reading e-books, featuring e-ink displays that mimic paper and provide long battery life."
             android:textSize="16sp"
+            android:justificationMode="inter_word"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
@@ -386,6 +409,8 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:text="- Small, lightweight laptops focused on basic computing tasks like web browsing and word processing, often with less powerful hardware compared to full-sized laptops."
             android:textSize="16sp"
+            android:justificationMode="inter_word"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
@@ -402,6 +427,8 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:text="- Portable computers with varying levels of performance, from basic models for everyday tasks to high-end models for gaming and professional use."
             android:textSize="16sp"
+            android:justificationMode="inter_word"
+
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
