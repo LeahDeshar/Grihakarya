@@ -27,6 +27,7 @@
             android:layout_height="260dp"
             android:scaleType="fitXY"
             android:src="@drawable/titlebg"
+
             />
         <ExpandableListView
             android:layout_marginHorizontal="20dp"
