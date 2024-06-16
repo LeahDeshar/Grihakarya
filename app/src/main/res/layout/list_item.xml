@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <!-- res/layout/list_item.xml -->
     <TextView
         android:id="@+id/lblListItem"
-        android:layout_width="0dp"
+        android:layout_width="327dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textColor="#000000"
         android:textSize="18sp"
+        android:text="Unit 1: Android Programming"
+        android:letterSpacing="0.08"
+        android:lineSpacingExtra="5sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

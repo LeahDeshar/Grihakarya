@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#CCCCCC"
+
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/lblListHeader"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="274dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="4dp"
         android:background="#CCCCCC"
         android:padding="15dp"
+        android:paddingLeft="20dp"
+        android:text="example"
         android:textColor="#000000"
         android:textSize="20sp"
+        android:letterSpacing="0.08"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
