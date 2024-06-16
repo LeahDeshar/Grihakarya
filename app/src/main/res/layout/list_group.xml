@@ -6,13 +6,13 @@
     android:layout_height="wrap_content"
 
 
-    android:layout_marginHorizontal="20dp"
-    android:background="@drawable/border">
+    android:layout_marginVertical="30dp"
+    android:background="@drawable/list_item_border">
 
     <TextView
         android:id="@+id/lblListHeader"
         android:layout_width="334dp"
-        android:layout_height="53dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:background="#CCCCCC"
         android:letterSpacing="0.08"
