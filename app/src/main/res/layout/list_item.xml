@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/lsit_border"
-    android:paddingVertical="5dp"
     android:layout_marginTop="20dp"
+    android:paddingLeft="20dp"
     android:layout_height="wrap_content">
     <!-- res/layout/list_item.xml -->
     <TextView
@@ -14,12 +14,13 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+
         android:text="Unit 1: Android Programming"
         android:letterSpacing="0.08"
         android:lineSpacingExtra="5sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
