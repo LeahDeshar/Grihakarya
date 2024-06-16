@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/lsit_border"
     android:paddingVertical="5dp"
+    android:layout_marginTop="20dp"
     android:layout_height="wrap_content">
     <!-- res/layout/list_item.xml -->
     <TextView
