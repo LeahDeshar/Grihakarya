@@ -6,4 +6,8 @@
 <!--    <color name="secondary">#739DF1</color>-->
     <color name="secondary">#8FAFEF</color>
     <color name="item_list">#DBE5FA</color>
+
+    <color name="p_primary">#FF9800</color>
+    <color name="p_secondary">#FBB650</color>
+
 </resources>
