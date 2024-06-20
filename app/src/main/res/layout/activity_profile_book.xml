@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -98,30 +97,23 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/navbar"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:layout_marginHorizontal="10dp"
+        android:paddingVertical="8dp"
+        android:layout_marginTop="20dp"
+        android:elevation="8dp"
+        >
 
-        <!-- Profile Picture -->
         <ImageView
             android:id="@+id/profile_picture"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/friend"
+            android:src="@drawable/profile"
                    android:background="@drawable/circular_image"
                     android:scaleType="centerCrop"
                     android:layout_marginEnd="16dp"
                     android:layout_gravity="center_vertical"
-
             />
-<!--        <ImageView-->
-<!--            android:layout_width="80dp"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:src="@drawable/profile"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:padding="8dp"-->
-<!--            android:outlineProvider="background"-->
-<!--            android:clipToOutline="true"-->
-<!--            android:layout_gravity="center_vertical"/>-->
-        <!-- User Info -->
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -134,8 +126,8 @@
                 android:id="@+id/user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="User Name"
-                android:textSize="18sp"
+                android:text="Isabella Brown"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black" />
 
@@ -144,8 +136,11 @@
                 android:id="@+id/user_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Additional information about the user"
+                android:text="Lorem ipsum dolor , consectetur adipiscing elit. Sed tortor viverra, et tincidunt dui bibendum."
                 android:textSize="14sp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="2dp"
                 android:textColor="@android:color/black" />
 
         </LinearLayout>
