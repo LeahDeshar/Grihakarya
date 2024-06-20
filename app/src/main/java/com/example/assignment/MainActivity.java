@@ -27,6 +27,7 @@ import com.example.assignment.UnitSeven.UnitSevenActivity;
 import com.example.assignment.UnitSix.UnitSixActivity;
 import com.example.assignment.UnitThree.UnitThreeActivity;
 import com.example.assignment.UnitTwo.UnitTwoActivity;
+import com.example.assignment.layoutExample.ProfileBookActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -115,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
                 return new HelloWorldActivity();
             case "Assignment 1":
                 return new AssignmentDetailsActivity();
+            case "Layout Exercise: Profile Book":
+                return new ProfileBookActivity();
             case "Example":
                 return new TextActivity();
 
