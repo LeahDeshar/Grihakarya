@@ -91,4 +91,63 @@
             </LinearLayout>
         </TableRow>
     </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navbar"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/friend"
+                   android:background="@drawable/circular_image"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="16dp"
+                    android:layout_gravity="center_vertical"
+
+            />
+<!--        <ImageView-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:src="@drawable/profile"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:padding="8dp"-->
+<!--            android:outlineProvider="background"-->
+<!--            android:clipToOutline="true"-->
+<!--            android:layout_gravity="center_vertical"/>-->
+        <!-- User Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <!-- User Name -->
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <!-- User Information -->
+            <TextView
+                android:id="@+id/user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional information about the user"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
