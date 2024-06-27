@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="20dp"
+
     tools:context=".widget.WidgetThreeFragment">
 
    <TextView
@@ -11,6 +11,7 @@
        android:layout_height="wrap_content"
        android:layout_gravity="center_horizontal"
        android:textSize="20dp"
+       android:layout_marginHorizontal="20dp"
        android:textColor="@color/primary"
        android:letterSpacing="0.06"
        android:textAlignment="center"
@@ -22,6 +23,7 @@
    <TimePicker
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:layout_marginHorizontal="20dp"
          android:id="@+id/timePicker"
        android:layout_marginTop="100dp"
        style="@style/CustomTimePicker"
