@@ -1,13 +1,13 @@
 package com.example.assignment.widget;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.example.assignment.R;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
@@ -15,13 +15,11 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.assignment.R;
-
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link WidgetSixFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
  */
 public class WidgetSixFragment extends Fragment {
 
@@ -33,12 +31,7 @@ public class WidgetSixFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     private EditText etPhoneNumber;
-    public WidgetSixFragment() {
-        // Required empty public constructor
-    }
-
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -57,6 +50,10 @@ public class WidgetSixFragment extends Fragment {
         return fragment;
     }
 
+    public WidgetSixFragment() {
+        // Required empty public constructor
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,57 +70,57 @@ public class WidgetSixFragment extends Fragment {
         rootLayout.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         rootLayout.setPadding(16, 16, 16, 16);
 
+        // Inner RelativeLayout for organizing elements
+        RelativeLayout innerLayout = new RelativeLayout(requireContext());
+        innerLayout.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
         // Title TextView
         TextView tvTitle = new TextView(requireContext());
+        tvTitle.setId(View.generateViewId());
         tvTitle.setText("Enter Phone Number");
         tvTitle.setTextSize(24);
         tvTitle.setTypeface(null, android.graphics.Typeface.BOLD);
         tvTitle.setGravity(Gravity.CENTER);
         RelativeLayout.LayoutParams titleParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        titleParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
-        rootLayout.addView(tvTitle, titleParams);
+        titleParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        titleParams.setMargins(0, 0, 0, 16); // Adjust bottom margin
+        innerLayout.addView(tvTitle, titleParams);
 
-        // EditText for phone number and DEL button in the first row
-        RelativeLayout.LayoutParams editTextParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        editTextParams.addRule(RelativeLayout.BELOW, tvTitle.getId());
-        editTextParams.setMargins(0, 32, 0, 16);
+        // First Row: EditText and DEL button
+        RelativeLayout firstRow = new RelativeLayout(requireContext());
+        firstRow.setId(View.generateViewId());
+        RelativeLayout.LayoutParams firstRowParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        firstRowParams.addRule(RelativeLayout.BELOW, tvTitle.getId());
+        firstRowParams.setMargins(0, 0, 0, 16); // Adjust bottom margin
+        innerLayout.addView(firstRow, firstRowParams);
 
         etPhoneNumber = new EditText(requireContext());
-        etPhoneNumber.setLayoutParams(editTextParams);
+        etPhoneNumber.setId(View.generateViewId());
+        etPhoneNumber.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         etPhoneNumber.setHint("Enter Phone Number");
         etPhoneNumber.setInputType(android.text.InputType.TYPE_CLASS_PHONE);
-        rootLayout.addView(etPhoneNumber);
-
-        RelativeLayout.LayoutParams delButtonParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        delButtonParams.addRule(RelativeLayout.ALIGN_PARENT_END);
-        delButtonParams.addRule(RelativeLayout.ALIGN_BASELINE, etPhoneNumber.getId());
+        firstRow.addView(etPhoneNumber);
 
         Button btnDelete = new Button(requireContext());
-        btnDelete.setLayoutParams(delButtonParams);
+        btnDelete.setId(View.generateViewId());
         btnDelete.setText("DEL");
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = etPhoneNumber.getText().toString();
-                if (!currentText.isEmpty()) {
-                    String newText = currentText.substring(0, currentText.length() - 1);
-                    etPhoneNumber.setText(newText);
-                    etPhoneNumber.setSelection(newText.length()); // Move cursor to end
-                }
-            }
-        });
-        rootLayout.addView(btnDelete);
+        RelativeLayout.LayoutParams btnDeleteParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        btnDeleteParams.addRule(RelativeLayout.ALIGN_PARENT_END);
+        btnDeleteParams.addRule(RelativeLayout.ALIGN_BASELINE, etPhoneNumber.getId());
+        btnDeleteParams.setMarginStart(8); // Adjust start margin
+        firstRow.addView(btnDelete, btnDeleteParams);
 
         // GridLayout for buttons
         GridLayout gridLayout = new GridLayout(requireContext());
+        gridLayout.setId(View.generateViewId());
         gridLayout.setLayoutParams(new GridLayout.LayoutParams());
         gridLayout.setRowCount(4);
         gridLayout.setColumnCount(3);
         gridLayout.setOrientation(GridLayout.HORIZONTAL);
         RelativeLayout.LayoutParams gridParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        gridParams.addRule(RelativeLayout.BELOW, etPhoneNumber.getId());
-        gridParams.setMargins(0, 32, 0, 16);
-        rootLayout.addView(gridLayout, gridParams);
+        gridParams.addRule(RelativeLayout.BELOW, firstRow.getId());
+        gridParams.setMargins(0, 16, 0, 16); // Adjust top and bottom margins
+        innerLayout.addView(gridLayout, gridParams);
 
         // Adding buttons to the GridLayout dynamically
         String[] buttonLabels = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"};
@@ -144,18 +141,18 @@ public class WidgetSixFragment extends Fragment {
             gridLayout.addView(button);
         }
 
-        // LinearLayout for CALL and SAVE buttons in the last row
-        LinearLayout linearLayout = new LinearLayout(requireContext());
-        linearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        linearLayout.setOrientation(LinearLayout.HORIZONTAL);
-        linearLayout.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM);
-        RelativeLayout.LayoutParams linearParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        linearParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        rootLayout.addView(linearLayout, linearParams);
+        // Last Row: CALL and SAVE buttons
+        LinearLayout lastRow = new LinearLayout(requireContext());
+        lastRow.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        lastRow.setOrientation(LinearLayout.HORIZONTAL);
+        lastRow.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM);
+        RelativeLayout.LayoutParams lastRowParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        lastRowParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        innerLayout.addView(lastRow, lastRowParams);
 
         Button btnCall = new Button(requireContext());
         btnCall.setText("CALL");
-        btnCall.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
+        btnCall.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,11 +165,11 @@ public class WidgetSixFragment extends Fragment {
                 }
             }
         });
-        linearLayout.addView(btnCall);
+        lastRow.addView(btnCall);
 
         Button btnSave = new Button(requireContext());
         btnSave.setText("SAVE");
-        btnSave.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
+        btnSave.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -185,9 +182,11 @@ public class WidgetSixFragment extends Fragment {
                 }
             }
         });
-        linearLayout.addView(btnSave);
+        lastRow.addView(btnSave);
+
+        // Add innerLayout to root RelativeLayout
+        rootLayout.addView(innerLayout);
 
         return rootLayout;
-
     }
 }

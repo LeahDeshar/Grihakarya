@@ -5,11 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".widget.WidgetSixFragment">
 
+
 <!--    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:padding="16dp">-->
-
+<!--<RelativeLayout-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content">-->
 <!--        &lt;!&ndash; Title &ndash;&gt;-->
 <!--        <TextView-->
 <!--            android:id="@+id/tvTitle"-->
@@ -161,7 +164,7 @@
 <!--                android:onClick="onSaveClick" />-->
 
 <!--        </LinearLayout>-->
-
+<!--</RelativeLayout>-->
 <!--    </RelativeLayout>-->
 
 </FrameLayout>
