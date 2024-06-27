@@ -375,7 +375,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="8dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/friend" />
+                    android:src="@drawable/friend2" />
 
                 <!-- Name and Time -->
                 <LinearLayout
@@ -390,7 +390,7 @@
                         android:id="@+id/post_user_name_second"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="John Doe"
+                        android:text="George Smith"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -400,7 +400,7 @@
                         android:id="@+id/post_time_second"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2 hours ago"
+                        android:text="3 hours ago"
                         android:textColor="@android:color/darker_gray"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -431,7 +431,7 @@
                 android:layout_marginBottom="8dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/sampl" />
+                android:src="@drawable/img_1" />
 
             <!-- Footer (Like and Comment Section) -->
             <LinearLayout
