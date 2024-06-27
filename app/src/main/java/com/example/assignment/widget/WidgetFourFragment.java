@@ -1,14 +1,17 @@
 package com.example.assignment.widget;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.CalendarView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import com.example.assignment.R;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,12 +20,12 @@ import com.example.assignment.R;
  */
 public class WidgetFourFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private CalendarView calendarView;
+    private TextView tvSelectedDate;
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -30,15 +33,6 @@ public class WidgetFourFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment WidgetFourFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static WidgetFourFragment newInstance(String param1, String param2) {
         WidgetFourFragment fragment = new WidgetFourFragment();
         Bundle args = new Bundle();
@@ -61,6 +55,30 @@ public class WidgetFourFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_widget_four, container, false);
+        View view = inflater.inflate(R.layout.fragment_widget_four, container, false);
+
+        calendarView = view.findViewById(R.id.calendarView);
+        tvSelectedDate = view.findViewById(R.id.tvSelectedDate);
+
+        // Set initial selected date
+        updateDateTextView(calendarView.getDate());
+
+        // CalendarView listener
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                Calendar selectedDate = Calendar.getInstance();
+                selectedDate.set(year, month, dayOfMonth);
+                updateDateTextView(selectedDate.getTimeInMillis());
+            }
+        });
+
+        return view;
+    }
+
+    private void updateDateTextView(long selectedDateMillis) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        String formattedDate = dateFormat.format(selectedDateMillis);
+        tvSelectedDate.setText("Selected Date: " + formattedDate);
     }
 }
