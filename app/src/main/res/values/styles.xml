@@ -9,4 +9,15 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:backgroundTint">#FF6200EE</item>
     </style>
+    <style name="CustomTimePicker" parent="Widget.MaterialComponents.TimePicker">
+
+        <item name="android:textColorPrimary">@color/primary</item>
+        <item name="android:textColorSecondary">#000000</item>
+        <item name="android:background">#C7D7F6</item>
+        <item name="android:headerBackground">@color/primary</item>
+        <item name="android:timePickerDialogTheme">@style/CustomTimePickerDialog</item>
+    </style>
+    <style name="CustomTimePickerDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="colorAccent">@color/primary</item>
+    </style>
 </resources>
