@@ -20,11 +20,17 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return new PartOneFragment();
+                return new WidgetOneFragment();
             case 1:
-                return new PartTwoFragment();
+                return new WidgetTwoFragment();
             case 2:
-                return new PartThreeFragment();
+                return new WidgetThreeFragment();
+            case 3:
+                return new WidgetFourFragment();
+            case 4:
+                return new WidgetFiveFragment();
+            case 5:
+                return new WidgetSixFragment();
             // Add cases for other units
             default:
                 return new PartTwoFragment();
@@ -33,6 +39,6 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 3; // Number of fragments
+        return 6; // Number of fragments
     }
 }
