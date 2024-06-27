@@ -138,17 +138,25 @@ xmlns:android="http://schemas.android.com/apk/res/android">
                 android:textColor="@android:color/black" />
 
             <!-- User Information -->
-            <TextView
-                android:id="@+id/user_info"
-                android:layout_width="wrap_content"
+<!--            <TextView-->
+<!--                android:id="@+id/user_info"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Lorem ipsum dolor,consectetur adipiscing elit. Sed tortor viverra, et tincidunt tortor viverra dui bibendum."-->
+<!--                android:textSize="14sp"-->
+<!--                android:paddingRight="9dp"-->
+<!--                android:justificationMode="inter_word"-->
+<!--                android:letterSpacing="0.05"-->
+<!--                android:lineSpacingExtra="2dp"-->
+<!--                android:textColor="@android:color/black" />-->
+            <Spinner
+                android:id="@+id/mood_spinner"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor,consectetur adipiscing elit. Sed tortor viverra, et tincidunt tortor viverra dui bibendum."
-                android:textSize="14sp"
-                android:paddingRight="9dp"
-                android:justificationMode="inter_word"
-                android:letterSpacing="0.05"
-                android:lineSpacingExtra="2dp"
-                android:textColor="@android:color/black" />
+                android:entries="@array/mood_array"
+                android:paddingRight="25dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/custom_spinner"/>
 
         </LinearLayout>
     </LinearLayout>

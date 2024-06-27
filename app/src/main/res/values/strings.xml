@@ -7,6 +7,13 @@
         <item>Image View</item>
         <item>Layout: ConstraintLayout</item>
     </string-array>
+    <string-array name="mood_array">
+        <item>Happy</item>
+        <item>Sad</item>
+        <item>Excited</item>
+        <item>Calm</item>
+        <item>Angry</item>
+    </string-array>
     <string-array name="exp_array">
         <item>A TextView is a widget used to display text in an Android application.
             Its one of the most commonly used UI elements in Android apps for displaying
