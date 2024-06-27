@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    tools:context=".layoutExample.ProfileBookRefineActivity">
+
+
+    <TableLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ProfileBook"
+                android:textColor="@color/p_primary"
+                android:textSize="26sp"
+
+                android:paddingStart="8dp"
+                android:gravity="start"
+                android:textStyle="bold"/>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Button 1 -->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_home_24"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_circular"
+                    android:padding="8dp" />
+
+                <!-- Button 2 -->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_notifications_24"
+                    android:background="@drawable/button_circular"
+                    android:layout_marginRight="5dp"
+
+                    android:padding="8dp" />
+
+                <!-- Button 3 -->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+
+                    android:src="@drawable/baseline_people_24"
+                    android:background="@drawable/button_circular"
+                    android:padding="8dp" />
+
+                <!-- Button 4 -->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+
+                    android:src="@drawable/baseline_message_24"
+                    android:background="@drawable/button_circular"
+
+                    android:padding="8dp" />
+
+                <!-- Button 5 -->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_menu_24"
+                    android:background="@drawable/button_circular"
+
+                    android:padding="8dp" />
+
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navbar"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="10dp"
+        android:paddingVertical="8dp"
+        android:background="@drawable/card_view"
+
+        android:layout_marginTop="20dp"
+        android:elevation="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center_vertical"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <!-- User Name -->
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Isabella Brown"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <!-- User Information -->
+            <TextView
+                android:id="@+id/user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor,consectetur adipiscing elit. Sed tortor viverra, et tincidunt tortor viverra dui bibendum."
+                android:textSize="14sp"
+                android:paddingRight="9dp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_section"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_view"
+        android:elevation="5dp"
+
+        android:padding="16dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <!-- Profile Picture (Header) -->
+                <ImageView
+                    android:id="@+id/post_profile_picture"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/friend" />
+
+                <!-- Name and Time -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!-- Name -->
+                    <TextView
+                        android:id="@+id/post_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="John Doe"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Time -->
+                    <TextView
+                        android:id="@+id/post_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 hours ago"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/threedot"
+                    android:layout_marginTop="10dp"
+
+
+                    />
+            </LinearLayout>
+
+            <!-- Body (Post Image) -->
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Would you consider yourself a foodie? Being a foodie is so much more than just enjoying stuffing your face with delicious food, apparently."
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/post_image"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sampl" />
+
+            <!-- Footer (Like and Comment Section) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+                    <!-- Like Button -->
+                    <ImageButton
+                        android:id="@+id/like_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="#fef6fe"
+                        android:src="@drawable/baseline_thumb_up_24" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:text="Like"
+                        />
+                </LinearLayout>
+
+                <!-- Comment Button -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+                    <!-- Like Button -->
+                    <ImageButton
+                        android:id="@+id/comment_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="#fef6fe"
+                        android:src="@drawable/baseline_mode_comment_24" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comment"
+                        android:paddingLeft="4dp"
+                        />
+                </LinearLayout>
+
+
+                <!--                 Spacer -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <!-- Share Button -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+                    <!-- Like Button -->
+                    <ImageButton
+                        android:id="@+id/share_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#fef6fe"
+                        android:src="@drawable/baseline_share_24" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:paddingLeft="4dp"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_post_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_post"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_view"
+        android:elevation="5dp"
+
+        android:padding="16dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSecond"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <!-- Profile Picture (Header) -->
+                <ImageView
+                    android:id="@+id/post_profile_picture_second"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/friend2" />
+
+                <!-- Name and Time -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!-- Name -->
+                    <TextView
+                        android:id="@+id/post_user_name_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="George Smith"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Time -->
+                    <TextView
+                        android:id="@+id/post_time_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3 hours ago"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/threedot"
+                    android:layout_marginTop="10dp"
+
+
+                    />
+            </LinearLayout>
+
+            <!-- Body (Post Image) -->
+            <TextView
+                android:id="@+id/content_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Would you consider yourself a foodie? Being a foodie is so much more than just enjoying stuffing your face with delicious food, apparently."
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/post_image_second"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_1" />
+
+            <!-- Footer (Like and Comment Section) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+                    <!-- Like Button -->
+                    <ImageButton
+                        android:id="@+id/like_button_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="#fef6fe"
+                        android:src="@drawable/baseline_thumb_up_24" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:text="Like"
+                        />
+                </LinearLayout>
+
+                <!-- Comment Button -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+                    <!-- Like Button -->
+                    <ImageButton
+                        android:id="@+id/comment_button_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="#fef6fe"
+                        android:src="@drawable/baseline_mode_comment_24" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comment"
+                        android:paddingLeft="4dp"
+                        />
+                </LinearLayout>
+
+
+                <!--                 Spacer -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <!-- Share Button -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+                    <!-- Like Button -->
+                    <ImageButton
+                        android:id="@+id/share_button_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#fef6fe"
+                        android:src="@drawable/baseline_share_24" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:paddingLeft="4dp"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
+</ScrollView>
