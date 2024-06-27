@@ -18,6 +18,8 @@ public class ExpandableListData {
         group2.add("Assignment 1");
         group2.add("Layout Exercise: Profile Book");
         group2.add("Layout Exercise: Profile Book Refined");
+        group2.add("Widget Exercise");
+
         group2.add("Example");
 
 //        group2.add("Item 2.3");
