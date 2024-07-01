@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.assignment.R;
 
@@ -64,10 +65,13 @@ public class Part7Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        Spinner spinner = findViewById(R.id.spinner);
+        View view = inflater.inflate(R.layout.fragment_part7, container, false);
+
+        // Initialize the Spinner
+        Spinner spinner = view.findViewById(R.id.spinner);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
                 R.array.spinner_items, android.R.layout.simple_spinner_item);
 
         // Specify the layout to use when the list of choices appears
@@ -81,7 +85,7 @@ public class Part7Fragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = parent.getItemAtPosition(position).toString();
-                Toast.makeText(MainActivity.this, "Selected: " + selectedItem, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Selected: " + selectedItem, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -89,6 +93,8 @@ public class Part7Fragment extends Fragment {
                 // Do nothing
             }
         });
-        return inflater.inflate(R.layout.fragment_part7, container, false);
+
+        return view;
+
     }
 }
