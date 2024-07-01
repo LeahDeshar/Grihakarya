@@ -40,6 +40,15 @@ android:layout_height="match_parent">
             android:textStyle="bold"
             android:textSize="18sp"
             android:paddingBottom="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A `Spinner` in Android is a UI widget that provides a drop-down list of selectable items. It functions similarly to a dropdown menu in web development."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp"/>
+
+
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="wrap_content"
