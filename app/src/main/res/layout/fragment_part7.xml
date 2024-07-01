@@ -13,6 +13,9 @@ android:layout_height="match_parent">
     android:layout_height="match_parent"
     tools:context=".UnitThree.Part7Fragment">
 
+
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,6 +33,18 @@ android:layout_height="match_parent">
         android:padding="16dp">
 
         <!-- TextView Widget -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spinner"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="8dp" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

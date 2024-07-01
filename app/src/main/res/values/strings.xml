@@ -14,6 +14,12 @@
         <item>Calm</item>
         <item>Angry</item>
     </string-array>
+    <string-array name="spinner_items">
+        <item>Java</item>
+        <item>Node js</item>
+        <item>Python</item>
+        <item>C#</item>
+    </string-array>
     <string-array name="exp_array">
         <item>A TextView is a widget used to display text in an Android application.
             Its one of the most commonly used UI elements in Android apps for displaying
