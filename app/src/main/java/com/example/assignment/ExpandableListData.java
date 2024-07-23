@@ -19,6 +19,10 @@ public class ExpandableListData {
         group2.add("Layout Exercise: Profile Book");
         group2.add("Layout Exercise: Profile Book Refined");
         group2.add("Widget Exercise");
+        group2.add("Quiz Game");
+        group2.add("Calculate Simple Interest");
+        group2.add("Rectangle Calculation");
+        group2.add("Calculator");
 
         group2.add("Example");
 
