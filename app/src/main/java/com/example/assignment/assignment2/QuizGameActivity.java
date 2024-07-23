@@ -47,9 +47,17 @@ public class QuizGameActivity extends AppCompatActivity {
     }
     private void loadQuestions() {
         questions = new ArrayList<>();
-        questions.add(new Question("What is the capital of France?", new String[]{"Berlin", "Madrid", "Paris", "Lisbon"}, 2));
-        questions.add(new Question("Who wrote 'Hamlet'?", new String[]{"Charles Dickens", "William Shakespeare", "Mark Twain", "Leo Tolstoy"}, 1));
-        // Add more questions as needed
+        questions.add(new Question("What is a key characteristic of mobile applications compared to desktop applications?", new String[]{"Higher memory usage", "Larger screen size", "Battery dependency", "Lack of touch interaction"}, 2));
+        questions.add(new Question("Which of the following is NOT a mobile operating system?", new String[]{"Android", "iOS", "Windows", "Linux"}, 3));
+        questions.add(new Question("What language is primarily used for Android development?", new String[]{"Swift", "Java", "C++", "Python"}, 1));
+        questions.add(new Question("What is the role of the AndroidManifest.xml file?", new String[]{"To define the UI layout", "To manage the app's permissions", "To store app's assets", "To compile the code"}, 1));
+        questions.add(new Question("Which method is used to start an activity in Android?", new String[]{"startActivity()", "initActivity()", "createActivity()", "launchActivity()"}, 0));
+        questions.add(new Question("What is an Intent in Android?", new String[]{"A background service", "A messaging object", "A UI component", "A database helper"}, 1));
+        questions.add(new Question("Which layout is used to arrange components in a single column or row?", new String[]{"LinearLayout", "RelativeLayout", "GridLayout", "FrameLayout"}, 0));
+        questions.add(new Question("What is an Android activity?", new String[]{"A service that runs in the background", "A component that provides a screen with which users can interact", "A broadcast receiver that listens for system events", "A content provider that manages access to data"}, 1));
+        questions.add(new Question("Which file is used to define the layout of an Android application?", new String[]{"MainActivity.java", "strings.xml", "activity_main.xml", "styles.xml"}, 2));
+        questions.add(new Question("What is the function of a ContentProvider in Android?", new String[]{"To handle background tasks", "To manage UI components", "To store and manage application data", "To handle network operations"}, 2));
+
     }
 
     private void displayQuestion() {

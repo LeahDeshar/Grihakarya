@@ -25,6 +25,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:text="Option 1"
+
         android:onClick="onOptionClicked"/>
 
     <Button
@@ -36,6 +37,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:text="Option 2"
+        android:background="@drawable/border"
+
         android:onClick="onOptionClicked"/>
 
     <Button
@@ -47,6 +50,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:text="Option 3"
+        android:background="@drawable/border"
+
         android:onClick="onOptionClicked"/>
 
     <Button
@@ -58,6 +63,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:text="Option 4"
+        android:background="@drawable/border"
         android:onClick="onOptionClicked"/>
 
 </RelativeLayout>
