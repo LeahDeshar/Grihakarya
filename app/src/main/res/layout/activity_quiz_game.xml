@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main"
+    android:layout_marginHorizontal="15dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,20 +13,23 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
         android:text="Question"
         android:textSize="24sp"
         android:textStyle="bold"/>
-
     <Button
         android:id="@+id/option1_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/question_text_view"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:text="Option 1"
-
+        android:textColor="@color/black"
+        android:backgroundTint="#FBDFDF"
+        android:padding="10dp"
+        android:textSize="18sp"
         android:onClick="onOptionClicked"/>
 
     <Button
@@ -37,8 +41,10 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:text="Option 2"
-        android:background="@drawable/border"
-
+        android:textColor="@color/black"
+        android:backgroundTint="#FBDFDF"
+        android:padding="10dp"
+        android:textSize="18sp"
         android:onClick="onOptionClicked"/>
 
     <Button
@@ -47,11 +53,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/option2_button"
         android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:backgroundTint="#FBDFDF"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:text="Option 3"
-        android:background="@drawable/border"
-
+        android:padding="10dp"
+        android:textSize="18sp"
         android:onClick="onOptionClicked"/>
 
     <Button
@@ -62,8 +70,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:textColor="@color/black"
+        android:backgroundTint="#FBDFDF"
         android:text="Option 4"
-        android:background="@drawable/border"
+        android:padding="10dp"
+        android:textSize="18sp"
         android:onClick="onOptionClicked"/>
 
 </RelativeLayout>

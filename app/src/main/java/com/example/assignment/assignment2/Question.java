@@ -1,7 +1,9 @@
 package com.example.assignment.assignment2;
 
 
-public class Question {
+import java.io.Serializable;
+
+public class Question implements Serializable {
     private String questionText;
     private String[] options;
     private int correctAnswerIndex;
