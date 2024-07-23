@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.assignment.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class QuizGameActivity extends AppCompatActivity {
@@ -69,19 +70,14 @@ public class QuizGameActivity extends AppCompatActivity {
             Question currentQuestion = questions.get(currentQuestionIndex);
             int selectedOptionIndex = -1;
 
-            switch (view.getId()) {
-                case R.id.option1_button:
-                    selectedOptionIndex = 0;
-                    break;
-                case R.id.option2_button:
-                    selectedOptionIndex = 1;
-                    break;
-                case R.id.option3_button:
-                    selectedOptionIndex = 2;
-                    break;
-                case R.id.option4_button:
-                    selectedOptionIndex = 3;
-                    break;
+            if (view.getId() == R.id.option1_button) {
+                selectedOptionIndex = 0;
+            } else if (view.getId() == R.id.option2_button) {
+                selectedOptionIndex = 1;
+            } else if (view.getId() == R.id.option3_button) {
+                selectedOptionIndex = 2;
+            } else if (view.getId() == R.id.option4_button) {
+                selectedOptionIndex = 3;
             }
 
             if (selectedOptionIndex == currentQuestion.getCorrectAnswerIndex()) {

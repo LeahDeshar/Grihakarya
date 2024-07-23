@@ -27,6 +27,7 @@ import com.example.assignment.UnitSeven.UnitSevenActivity;
 import com.example.assignment.UnitSix.UnitSixActivity;
 import com.example.assignment.UnitThree.UnitThreeActivity;
 import com.example.assignment.UnitTwo.UnitTwoActivity;
+import com.example.assignment.assignment2.QuizGameActivity;
 import com.example.assignment.layoutExample.ProfileBookActivity;
 import com.example.assignment.layoutExample.ProfileBookRefineActivity;
 import com.example.assignment.widget.WidgetActivity;
@@ -124,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
                 return new ProfileBookRefineActivity();
             case "Widget Exercise":
                 return new WidgetActivity();
+            case "Quiz Game":
+                return new QuizGameActivity();
             case "Example":
                 return new TextActivity();
 
