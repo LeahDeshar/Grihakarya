@@ -527,5 +527,29 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_post_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_post"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_view"
+        android:elevation="5dp"
+
+        android:padding="16dp">
+
+        <LinearLayout4f
+            android:layout_width="0dp"
+android:layout_marginVertical="5dp"
+            android:layout_height="wrap_content">
+
+        </LinearLayout4f>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </RelativeLayout>
 </ScrollView>
