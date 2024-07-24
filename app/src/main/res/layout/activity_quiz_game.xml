@@ -77,4 +77,15 @@
         android:textSize="18sp"
         android:onClick="onOptionClicked"/>
 
+
+    <TextView
+        android:id="@+id/countQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/option4_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Question 1/10"
+        />
+
 </RelativeLayout>

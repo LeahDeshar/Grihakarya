@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuizGameActivity extends AppCompatActivity {
-    private TextView questionTextView;
+    private TextView questionTextView,countQuestionTextView;
     private Button option1Button, option2Button, option3Button, option4Button;
 
     private List<Question> questions;
@@ -38,6 +38,7 @@ public class QuizGameActivity extends AppCompatActivity {
         });
 
         questionTextView = findViewById(R.id.question_text_view);
+        countQuestionTextView = findViewById(R.id.countQuestion);
         option1Button = findViewById(R.id.option1_button);
         option2Button = findViewById(R.id.option2_button);
         option3Button = findViewById(R.id.option3_button);
@@ -64,6 +65,7 @@ public class QuizGameActivity extends AppCompatActivity {
     private void displayQuestion() {
         if (currentQuestionIndex < questions.size()) {
             Question currentQuestion = questions.get(currentQuestionIndex);
+            countQuestionTextView.setText((currentQuestionIndex + 1) + "/" + questions.size());
             questionTextView.setText(currentQuestion.getQuestionText());
             option1Button.setText(currentQuestion.getOptions()[0]);
             option2Button.setText(currentQuestion.getOptions()[1]);

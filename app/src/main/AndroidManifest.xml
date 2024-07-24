@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Assignment"
         tools:targetApi="31">
         <activity
+            android:name=".assignment2.SimpleInterestActivity"
+            android:exported="false" />
+        <activity
             android:name=".assignment2.SummaryActivity"
             android:exported="false" />
         <activity
