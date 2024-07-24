@@ -10,4 +10,4 @@ Contributions are welcome! If you want to contribute to Grihakarya
 
 # OutPut
 
-![output](o.png)
+![output](o2.png)
