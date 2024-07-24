@@ -1,6 +1,8 @@
 package com.example.assignment.assignment2;
 
 import android.os.Bundle;
+import android.view.Gravity;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -14,7 +16,7 @@ import com.example.assignment.R;
 import java.util.List;
 
 public class SummaryActivity extends AppCompatActivity {
-    private TextView summaryTextView;
+    private LinearLayout summaryLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,7 @@ public class SummaryActivity extends AppCompatActivity {
             return insets;
         });
 
-        summaryTextView = findViewById(R.id.summary_text_view);
+        summaryLayout = findViewById(R.id.summary_layout);
 
         // Get the data passed from the QuizGameActivity
         int score = getIntent().getIntExtra("score", 0);
@@ -37,14 +39,51 @@ public class SummaryActivity extends AppCompatActivity {
         displaySummary(score, questions);
     }
     private void displaySummary(int score, List<Question> questions) {
-        StringBuilder summary = new StringBuilder();
-        summary.append("Your score is: ").append(score).append("/").append(questions.size()).append("\n\n");
+        TextView scoreTextView = new TextView(this);
+        scoreTextView.setText("Your score is: " + score + "/" + questions.size());
+        scoreTextView.setGravity(Gravity.CENTER);
+        scoreTextView.setTextSize(24);
+        scoreTextView.setTextColor(getResources().getColor(R.color.black));
+        scoreTextView.setPadding(0, 0, 0, 16);
+        summaryLayout.addView(scoreTextView);
 
-        for (Question question : questions) {
-            summary.append(question.getQuestionText()).append("\n");
-            summary.append("Correct answer: ").append(question.getOptions()[question.getCorrectAnswerIndex()]).append("\n\n");
+
+
+        for (int i = 0; i < questions.size(); i++) {
+            Question question = questions.get(i);
+
+            TextView questionTextView = new TextView(this);
+            questionTextView.setText((i + 1) + ". " + question.getQuestionText());
+            questionTextView.setTextSize(18);
+            questionTextView.setTextColor(getResources().getColor(R.color.black));
+            questionTextView.setPadding(0, 8, 0, 8);
+            summaryLayout.addView(questionTextView);
+
+            TextView answerTextView = new TextView(this);
+            answerTextView.setText("Correct answer: " + question.getOptions()[question.getCorrectAnswerIndex()]);
+            answerTextView.setTextSize(16);
+            answerTextView.setTextColor(getResources().getColor(R.color.green));
+            answerTextView.setPadding(0, 0, 0, 16);
+            summaryLayout.addView(answerTextView);
         }
 
-        summaryTextView.setText(summary.toString());
+//        int totalQuestions = questions.size();
+//        for (Question question : questions) {
+//            TextView questionTextView = new TextView(this);
+////            set the text with the question number and the question text
+//
+////            questionTextView.setText(totalQuestions  + ")" + question.getQuestionText());
+//            questionTextView.setTextSize(18);
+//            questionTextView.setTextColor(getResources().getColor(R.color.black));
+//            questionTextView.setPadding(0, 8, 0, 8);
+//            summaryLayout.addView(questionTextView);
+//
+//            TextView answerTextView = new TextView(this);
+//            answerTextView.setText("Correct answer: " + question.getOptions()[question.getCorrectAnswerIndex()]);
+//            answerTextView.setTextSize(16);
+//            answerTextView.setTextColor(getResources().getColor(R.color.primary));
+//            answerTextView.setPadding(0, 0, 0, 16);
+//            summaryLayout.addView(answerTextView);
+//        }
     }
 }
