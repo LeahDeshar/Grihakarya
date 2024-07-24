@@ -9,4 +9,54 @@
     tools:context=".assignment2.SimpleInterestActivity">
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simple Interest Calculator"
+        android:textColor="@color/primary"
+      android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        />
+    <EditText
+        android:id="@+id/principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Principal"
+        android:inputType="numberDecimal"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/interest_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Interest Rate"
+        android:inputType="numberDecimal"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Time"
+        android:inputType="numberDecimal"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE"
+        android:backgroundTint="@color/primary"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Result"/>
+
 </LinearLayout>

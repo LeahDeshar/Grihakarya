@@ -27,7 +27,9 @@ import com.example.assignment.UnitSeven.UnitSevenActivity;
 import com.example.assignment.UnitSix.UnitSixActivity;
 import com.example.assignment.UnitThree.UnitThreeActivity;
 import com.example.assignment.UnitTwo.UnitTwoActivity;
+import com.example.assignment.assignment2.CalculatorActivity;
 import com.example.assignment.assignment2.QuizGameActivity;
+import com.example.assignment.assignment2.RectCalculateActivity;
 import com.example.assignment.assignment2.SimpleInterestActivity;
 import com.example.assignment.layoutExample.ProfileBookActivity;
 import com.example.assignment.layoutExample.ProfileBookRefineActivity;
@@ -126,6 +128,10 @@ public class MainActivity extends AppCompatActivity {
                 return new ProfileBookRefineActivity();
             case "Calculate Simple Interest":
                 return new SimpleInterestActivity();
+            case "Rectangle Calculation":
+                return new RectCalculateActivity();
+            case "Calculator":
+                return new CalculatorActivity();
             case "Widget Exercise":
                 return new WidgetActivity();
             case "Quiz Game":
