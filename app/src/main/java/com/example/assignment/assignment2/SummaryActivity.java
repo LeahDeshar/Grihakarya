@@ -2,6 +2,7 @@ package com.example.assignment.assignment2;
 
 import android.os.Bundle;
 import android.view.Gravity;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,6 +18,8 @@ import java.util.List;
 
 public class SummaryActivity extends AppCompatActivity {
     private LinearLayout summaryLayout;
+    private ImageView resultImageView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +33,28 @@ public class SummaryActivity extends AppCompatActivity {
         });
 
         summaryLayout = findViewById(R.id.summary_layout);
+        resultImageView = findViewById(R.id.result_image_view);
 
         // Get the data passed from the QuizGameActivity
         int score = getIntent().getIntExtra("score", 0);
         List<Question> questions = (List<Question>) getIntent().getSerializableExtra("questions");
 
+
+        setResultImage(score);
         // Display the summary
         displaySummary(score, questions);
+    }
+    private void setResultImage(int score) {
+        int imageResource;
+        if (score == 10) {
+            imageResource = R.drawable.winner;
+        } else if (score == 9) {
+            imageResource = R.drawable.runnerup;
+        }
+     else {
+            imageResource = R.drawable.extra;
+        }
+        resultImageView.setImageResource(imageResource);
     }
     private void displaySummary(int score, List<Question> questions) {
         TextView scoreTextView = new TextView(this);
