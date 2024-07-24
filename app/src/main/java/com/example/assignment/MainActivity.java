@@ -28,6 +28,7 @@ import com.example.assignment.UnitSix.UnitSixActivity;
 import com.example.assignment.UnitThree.UnitThreeActivity;
 import com.example.assignment.UnitTwo.UnitTwoActivity;
 import com.example.assignment.assignment2.QuizGameActivity;
+import com.example.assignment.assignment2.SimpleInterestActivity;
 import com.example.assignment.layoutExample.ProfileBookActivity;
 import com.example.assignment.layoutExample.ProfileBookRefineActivity;
 import com.example.assignment.widget.WidgetActivity;
@@ -123,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
                 return new ProfileBookActivity();
             case "Layout Exercise: Profile Book Refined":
                 return new ProfileBookRefineActivity();
+            case "Calculate Simple Interest":
+                return new SimpleInterestActivity();
             case "Widget Exercise":
                 return new WidgetActivity();
             case "Quiz Game":
