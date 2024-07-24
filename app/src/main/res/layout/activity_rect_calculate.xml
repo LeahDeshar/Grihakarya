@@ -19,7 +19,7 @@
         android:gravity="center"
         />
     <EditText
-        android:id="@+id/principal"
+        android:id="@+id/lengthEt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter the Length"
@@ -27,7 +27,7 @@
         android:layout_margin="16dp"/>
 
     <EditText
-        android:id="@+id/interest_rate"
+        android:id="@+id/breadthEt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter the Breadth"
@@ -49,5 +49,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Result"/>
+        android:text=""/>
 </LinearLayout>

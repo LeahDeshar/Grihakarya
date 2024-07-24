@@ -29,7 +29,7 @@
         android:layout_margin="16dp"/>
 
     <EditText
-        android:id="@+id/interest_rate"
+        android:id="@+id/rate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter the Interest Rate"
@@ -57,6 +57,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Result"/>
+        android:text=""/>
 
 </LinearLayout>
