@@ -5,6 +5,94 @@
     android:layout_height="match_parent"
     tools:context=".UnitFour.FourPartTwoFragment">
 
-   
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/question_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explain Intent and Its types ?"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="An Intent in Android is a messaging object used to request an action from another app component. It can be used to start activities, services, deliver broadcasts, or communicate with other apps. Intents can carry data to be processed by the receiving component."
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="There are two types of intents:"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Explicit Intent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="An explicit intent specifies the exact component to start by using the component's class name. It is typically used to start a specific activity or service within the same application."
+                android:paddingBottom="16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example:"
+                android:textStyle="italic"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent intent = new Intent(this, SecondActivity.class);\nstartActivity(intent);"
+                android:paddingBottom="16dp"
+                android:background="#f0f0f0"
+                android:padding="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Implicit Intent"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="An implicit intent does not specify a specific component. Instead, it declares a general action to perform, which allows any app that can handle that action to respond. The system will determine the best component to run based on the intent's action and data."
+                android:paddingBottom="16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example:"
+                android:textStyle="italic"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent intent = new Intent(Intent.ACTION_VIEW);\nintent.setData(Uri.parse('http://www.example.com'));\nstartActivity(intent);"
+            android:paddingBottom="16dp"
+            android:background="#f0f0f0"
+            android:padding="8dp"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
