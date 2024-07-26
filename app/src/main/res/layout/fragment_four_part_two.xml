@@ -247,7 +247,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="<?xml version='1.0' encoding='utf-8'?>\n<RelativeLayout xmlns:android='http://schemas.android.com/apk/res/android'\n    android:layout_width='match_parent'\n    android:layout_height='match_parent'>\n\n<TextView\n android:id='@+id/textView'\nandroid:layout_width='wrap_content'\nandroid:layout_height='wrap_content'\nandroid:text='This is the Second Activity'\nandroid:layout_centerInParent='true'/>\n\n</RelativeLayout>"
+                android:text="&lt;?xml version='1.0' encoding='utf-8'?&gt;\n&lt;RelativeLayout xmlns:android='http://schemas.android.com/apk/res/android'\n    android:layout_width='match_parent'\n    android:layout_height='match_parent'&gt;\n\n&lt;TextView\n android:id='@+id/textView'\nandroid:layout_width='wrap_content'\nandroid:layout_height='wrap_content'\nandroid:text='This is the Second Activity'\nandroid:layout_centerInParent='true'/&gt;\n\n&lt;/RelativeLayout&gt;"
         android:paddingBottom="16dp"
         android:background="#f0f0f0"
         android:padding="8dp"/>
@@ -276,10 +276,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="<application>\n \n  <activity android:name='.MainActivity'>\n    <intent-filter>\n      <action android:name='android.intent.action.MAIN' />\n
-   <category android:name='android.intent.category.LAUNCHER' />\n
-    </intent-filter>\n    </activity>\n
-    <activity android:name='.SecondActivity' />\n</application>"
+            android:text="&lt;application&gt;\n \n   &lt;activity android:name='.MainActivity'&gt;\n     &lt;intent-filter&gt;\n      &lt;action android:name='android.intent.action.MAIN' /&gt;\n
+    &lt;category android:name='android.intent.category.LAUNCHER' /&gt;\n
+     &lt;/intent-filter&gt;\n     &lt;/activity&gt;\n
+     &lt;activity android:name='.SecondActivity' /&gt;\n &lt;/application&gt;"
     android:paddingBottom="16dp"
     android:background="#f0f0f0"
     android:padding="8dp"/>
@@ -327,7 +327,7 @@ android:paddingBottom="8dp"/>
 <TextView
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-android:text="\n<?xml version='1.0' encoding='utf-8'?>\n<RelativeLayout xmlns:android='http://schemas.android.com/apk/res/android'\nandroid:layout_width='match_parent'\n    android:layout_height='match_parent'>\n\n    <Button\n        android:id='@+id/button'\n        android:layout_width='wrap_content' \n        android:layout_height='wrap_content'\n        android:text='Go to Second Activity'\n        android:layout_centerInParent='true'/>\n\n</RelativeLayout>"
+android:text="\n &lt;?xml version='1.0' encoding='utf-8'? &gt;\n &lt;RelativeLayout xmlns:android='http://schemas.android.com/apk/res/android'\nandroid:layout_width='match_parent'\n    android:layout_height='match_parent' &gt;\n\n     &lt;Button\n        android:id='@+id/button'\n        android:layout_width='wrap_content' \n        android:layout_height='wrap_content'\n        android:text='Go to Second Activity'\n        android:layout_centerInParent='true'/ &gt;\n\n &lt;/RelativeLayout &gt;"
     android:paddingBottom="16dp"
     android:background="#f0f0f0"
     android:padding="8dp"/>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".UnitFour.FourPartThreeFragment">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -45,12 +45,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2. Identify the <application> Tag:"
+                android:text="2. Identify the &lt;application&gt; Tag:"
                 android:paddingBottom="4dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="- Inside the AndroidManifest.xml file, locate the <application> tag, which contains all the components of your application."
+                android:text="- Inside the AndroidManifest.xml file, locate the &lt;application&gt; tag, which contains all the components of your application."
                 android:paddingBottom="16dp"/>
 
             <TextView
@@ -61,7 +61,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="- Within the <application> tag, add an <activity> element for each activity you want to declare."
+                android:text="- Within the &lt;application> tag, add an &lt;activity&gt; element for each activity you want to declare."
                 android:paddingBottom="16dp"/>
 
             <TextView
@@ -74,17 +74,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="<application>\n     <activity android:name='.MainActivity'>\n
-      <intent-filter>\n
-         <action android:name='android.intent.action.MAIN' />\n
-         <category android:name='android.intent.category.LAUNCHER' />\n
-       </intent-filter>\n    </activity>\n    <activity android:name='.SecondActivity' />\n
-<activity android:name='.ThirdActivity' />\n \n</application>"
+                android:text="&lt;application>\n     &lt;activity android:name='.MainActivity'&gt;\n
+      &lt;intent-filter&gt;\n
+         &lt;action android:name='android.intent.action.MAIN' /&gt;\n
+         &lt;category android:name='android.intent.category.LAUNCHER' /&gt;\n
+       &lt;/intent-filter&gt;\n   &lt;/activity&gt;\n    &lt;activity android:name='.SecondActivity' /&gt;\n
+&lt;activity android:name='.ThirdActivity' /&gt;\n \n&lt;/application&gt;"
         android:background="#f0f0f0"
         android:padding="8dp"
         android:layout_marginBottom="16dp"/>
 
-   
+
 
             <TextView
                 android:layout_width="wrap_content"

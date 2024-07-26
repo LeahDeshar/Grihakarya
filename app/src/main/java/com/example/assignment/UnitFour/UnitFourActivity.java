@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.assignment.R;
-import com.example.assignment.UnitOne.ViewPagerAdapter;
+import com.example.assignment.UnitFour.ViewPagerAdapter;
 
 public class UnitFourActivity extends AppCompatActivity {
 
