@@ -5,10 +5,156 @@
     android:layout_height="match_parent"
     tools:context=".UnitFour.FourPartThreeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How to Declare Multiple Activities in AndroidManifest.xml"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step-by-Step Guide:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Open AndroidManifest.xml:"
+                android:paddingBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Locate the AndroidManifest.xml file in your project, usually found in the app/src/main directory."
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Identify the <application> Tag:"
+                android:paddingBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Inside the AndroidManifest.xml file, locate the <application> tag, which contains all the components of your application."
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Add Activity Declarations:"
+                android:paddingBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Within the <application> tag, add an <activity> element for each activity you want to declare."
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example:"
+                android:paddingBottom="4dp"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="<application>\n     <activity android:name='.MainActivity'>\n
+      <intent-filter>\n
+         <action android:name='android.intent.action.MAIN' />\n
+         <category android:name='android.intent.category.LAUNCHER' />\n
+       </intent-filter>\n    </activity>\n    <activity android:name='.SecondActivity' />\n
+<activity android:name='.ThirdActivity' />\n \n</application>"
+        android:background="#f0f0f0"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"/>
+
+   
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How to Pass Data Between Multiple Activities Using Intent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step-by-Step Guide:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Pass Data from the First Activity:"
+                android:paddingBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Use an Intent to pass data to the second activity using the `putExtra` method."
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example:"
+                android:paddingBottom="4dp"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="// FirstActivity.java\nIntent intent = new Intent(FirstActivity.this, SecondActivity.class);\nintent.putExtra('EXTRA_MESSAGE', 'Hello, Second Activity!');\nstartActivity(intent);"
+            android:background="#f0f0f0"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Retrieve Data in the Second Activity:"
+                android:paddingBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Use the `getIntent` method to retrieve the data in the second activity using the `getStringExtra` method."
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example:"
+                android:paddingBottom="4dp"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="// SecondActivity.java\nIntent intent = getIntent();\nString message = intent.getStringExtra('EXTRA_MESSAGE');\nTextView textView = findViewById(R.id.textView);\ntextView.setText(message);"
+            android:background="#f0f0f0"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+</ScrollView>
 
 </FrameLayout>
