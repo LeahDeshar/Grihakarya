@@ -23,6 +23,9 @@ public class ExpandableListData {
         group2.add("Calculate Simple Interest");
         group2.add("Rectangle Calculation");
         group2.add("Calculator");
+        group2.add("Design Login Form");
+        group2.add("Design a Visiting card");
+        group2.add("Design Table with Table Layout");
 
         group2.add("Example");
 
