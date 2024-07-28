@@ -31,6 +31,9 @@ import com.example.assignment.assignment2.CalculatorActivity;
 import com.example.assignment.assignment2.QuizGameActivity;
 import com.example.assignment.assignment2.RectCalculateActivity;
 import com.example.assignment.assignment2.SimpleInterestActivity;
+import com.example.assignment.labassignment.LabOneActivity;
+import com.example.assignment.labassignment.LabThreeActivity;
+import com.example.assignment.labassignment.LabTwoActivity;
 import com.example.assignment.layoutExample.ProfileBookActivity;
 import com.example.assignment.layoutExample.ProfileBookRefineActivity;
 import com.example.assignment.widget.WidgetActivity;
@@ -136,6 +139,12 @@ public class MainActivity extends AppCompatActivity {
                 return new WidgetActivity();
             case "Quiz Game":
                 return new QuizGameActivity();
+            case "Design Login Form":
+                return new LabOneActivity();
+            case "Design a Visiting card":
+                return new LabTwoActivity();
+            case "Design Table with Table Layout":
+                return new LabThreeActivity();
             case "Example":
                 return new TextActivity();
 

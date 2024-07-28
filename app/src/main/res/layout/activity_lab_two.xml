@@ -7,4 +7,57 @@
     android:layout_height="match_parent"
     tools:context=".labassignment.LabTwoActivity">
 
+
+    <LinearLayout
+        android:id="@+id/frontlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+<ImageView
+    android:layout_width="210dp"
+    android:scaleType="center"
+    android:layout_height="wrap_content"
+    android:src="@drawable/card_logi"
+    android:layout_gravity="center"
+/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#CABC8B"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:text="Empowering Innovation, Transforming Tomorrow"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:background="#CABC8B"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#CABC8B"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:text="Empowering Innovation, Transforming Tomorrow"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/backlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
