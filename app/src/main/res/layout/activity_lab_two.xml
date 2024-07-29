@@ -103,7 +103,25 @@
                 android:text="Full Stack Developer"
                 android:textColor="#051d28"
                 android:textSize="16sp" />
-            
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baseline_phone_24"
+                android:backgroundTint="#051d28"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baseline_email_24"
+                android:backgroundTint="#051d28"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baseline_phone_24"
+                android:backgroundTint="#051d28"
+                />
         </LinearLayout>
 
 
