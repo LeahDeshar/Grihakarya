@@ -41,11 +41,16 @@ public class LabSevenActivity extends AppCompatActivity {
            Toast.makeText(this, "Settings selected", Toast.LENGTH_SHORT).show();
            return true;
        }
-            else if (item.getItemId() == R.id.action_about) {
+        else if (item.getItemId() == R.id.action_about) {
            Toast.makeText(this, "About selected", Toast.LENGTH_SHORT).show();
            return true;
 
-       }else {
+       }else if(item.getItemId() == R.id.action_help){
+           Toast.makeText(this, "Help selected", Toast.LENGTH_SHORT).show();
+           return true;
+
+       }
+        else {
 
            return super.onOptionsItemSelected(item);
        }
