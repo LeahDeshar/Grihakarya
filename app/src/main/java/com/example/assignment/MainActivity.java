@@ -34,6 +34,7 @@ import com.example.assignment.assignment2.SimpleInterestActivity;
 import com.example.assignment.labassignment.LabFiveActivity;
 import com.example.assignment.labassignment.LabFourActivity;
 import com.example.assignment.labassignment.LabOneActivity;
+import com.example.assignment.labassignment.LabSevenActivity;
 import com.example.assignment.labassignment.LabSixActivity;
 import com.example.assignment.labassignment.LabThreeActivity;
 import com.example.assignment.labassignment.LabThreeDetailsActivity;
@@ -157,6 +158,9 @@ public class MainActivity extends AppCompatActivity {
                 return new LabFiveActivity();
             case "Get a secret message ":
                 return new LabSixActivity();
+            case "Options menu":
+                return new LabSevenActivity();
+
             default:
                 Toast.makeText(this, "No Screen", Toast.LENGTH_SHORT).show();
                 return this;

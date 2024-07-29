@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Assignment"
         tools:targetApi="31">
         <activity
+            android:name=".labassignment.LabSevenActivity"
+            android:exported="false" />
+        <activity
             android:name=".labassignment.LabSixActivity"
             android:exported="false" />
         <activity

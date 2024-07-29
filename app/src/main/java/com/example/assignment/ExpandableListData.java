@@ -29,6 +29,10 @@ public class ExpandableListData {
         group2.add("Develop form to fill-in student information");
         group2.add("Save phone number");
         group2.add("Get a secret message ");
+        group2.add("Options menu");
+        group2.add("Context menu");
+        group2.add("Popup menu");
+        group2.add("Alert Dialog");
 
         group2.add("Example");
 
