@@ -27,6 +27,8 @@ public class ExpandableListData {
         group2.add("Design a Visiting card");
         group2.add("Design Table with Table Layout");
         group2.add("Develop form to fill-in student information");
+        group2.add("Save phone number");
+        group2.add("Get a secret message ");
 
         group2.add("Example");
 
