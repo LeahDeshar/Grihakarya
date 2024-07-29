@@ -31,8 +31,10 @@ import com.example.assignment.assignment2.CalculatorActivity;
 import com.example.assignment.assignment2.QuizGameActivity;
 import com.example.assignment.assignment2.RectCalculateActivity;
 import com.example.assignment.assignment2.SimpleInterestActivity;
+import com.example.assignment.labassignment.LabFourActivity;
 import com.example.assignment.labassignment.LabOneActivity;
 import com.example.assignment.labassignment.LabThreeActivity;
+import com.example.assignment.labassignment.LabThreeDetailsActivity;
 import com.example.assignment.labassignment.LabTwoActivity;
 import com.example.assignment.layoutExample.ProfileBookActivity;
 import com.example.assignment.layoutExample.ProfileBookRefineActivity;
@@ -143,13 +145,13 @@ public class MainActivity extends AppCompatActivity {
                 return new LabOneActivity();
             case "Design a Visiting card":
                 return new LabTwoActivity();
-            case "Design Table with Table Layout":
+            case "Develop form to fill-in student information":
                 return new LabThreeActivity();
             case "Example":
                 return new TextActivity();
-
-
-                default:
+            case "Design Table with Table Layout":
+                return new LabFourActivity();
+            default:
                 Toast.makeText(this, "No Screen", Toast.LENGTH_SHORT).show();
                 return this;
         }
