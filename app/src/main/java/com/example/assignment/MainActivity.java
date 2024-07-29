@@ -31,8 +31,10 @@ import com.example.assignment.assignment2.CalculatorActivity;
 import com.example.assignment.assignment2.QuizGameActivity;
 import com.example.assignment.assignment2.RectCalculateActivity;
 import com.example.assignment.assignment2.SimpleInterestActivity;
+import com.example.assignment.labassignment.LabFiveActivity;
 import com.example.assignment.labassignment.LabFourActivity;
 import com.example.assignment.labassignment.LabOneActivity;
+import com.example.assignment.labassignment.LabSixActivity;
 import com.example.assignment.labassignment.LabThreeActivity;
 import com.example.assignment.labassignment.LabThreeDetailsActivity;
 import com.example.assignment.labassignment.LabTwoActivity;
@@ -151,6 +153,10 @@ public class MainActivity extends AppCompatActivity {
                 return new TextActivity();
             case "Design Table with Table Layout":
                 return new LabFourActivity();
+            case "Save phone number":
+                return new LabFiveActivity();
+            case "Get a secret message ":
+                return new LabSixActivity();
             default:
                 Toast.makeText(this, "No Screen", Toast.LENGTH_SHORT).show();
                 return this;
