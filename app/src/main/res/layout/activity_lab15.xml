@@ -5,10 +5,24 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="15dp"
+
     tools:context=".labassignment.Lab15Activity">
+<!--    Header title-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Working with API"
+        android:textSize="24sp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
+        android:layout_below="@+id/title"
         android:layout_height="match_parent"/>
 </RelativeLayout >
