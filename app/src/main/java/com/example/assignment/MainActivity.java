@@ -33,6 +33,8 @@ import com.example.assignment.assignment2.RectCalculateActivity;
 import com.example.assignment.assignment2.SimpleInterestActivity;
 import com.example.assignment.labassignment.Lab11Activity;
 import com.example.assignment.labassignment.Lab12Activity;
+import com.example.assignment.labassignment.Lab13Activity;
+import com.example.assignment.labassignment.Lab14Activity;
 import com.example.assignment.labassignment.LabEightActivity;
 import com.example.assignment.labassignment.LabFiveActivity;
 import com.example.assignment.labassignment.LabFourActivity;
@@ -175,7 +177,10 @@ public class MainActivity extends AppCompatActivity {
                 return new Lab11Activity();
             case "Image gallery using GridView":
                 return new Lab12Activity();
-
+            case "Image gallery using RecyclerView":
+                return new Lab13Activity();
+            case "Contact App using SQLite":
+                return new Lab14Activity();
 
             default:
                 Toast.makeText(this, "No Screen", Toast.LENGTH_SHORT).show();
