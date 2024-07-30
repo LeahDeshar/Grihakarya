@@ -1,10 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:padding="16dp"
+    android:layout_marginHorizontal="15dp"
     tools:context=".labassignment.Lab14Activity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    Header-->
+    <TextView
+        android:id="@+id/header"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact App with Sqlite"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:padding="16dp"
+        android:orientation="vertical">
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/idEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID (for update/delete)"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/phoneEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/list_item_border"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="2dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_24" />
+
+
+        <ImageView
+            android:id="@+id/viewButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:src="@drawable/baseline_remove_red_eye_24" />
+
+        <ImageView
+            android:id="@+id/updateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/baseline_update_24" />
+
+        <ImageView
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_delete_24"
+
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@+id/inputLayout"
+        android:id="@+id/contactListView"
+        android:layout_marginTop="30dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout >
