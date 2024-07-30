@@ -33,6 +33,11 @@ public class ExpandableListData {
         group2.add("Context menu");
         group2.add("Popup menu");
         group2.add("Alert Dialog");
+        group2.add("Area of a rectangle in a custom dialog");
+        group2.add("Image gallery using GridView");
+        group2.add("Image gallery using RecyclerView");
+        group2.add("Contact App using SQLite");
+        group2.add("Working with API");
 
         group2.add("Example");
 
