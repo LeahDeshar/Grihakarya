@@ -17,8 +17,8 @@ import com.example.assignment.R;
 
 public class Lab12Activity extends AppCompatActivity {
     private int[] imageIds = {
-            R.drawable.friend, R.drawable.friend2, R.drawable.profile,
-            R.drawable.winner, R.drawable.ok, R.drawable.runnerup
+            R.drawable.image1, R.drawable.image2, R.drawable.image3,
+            R.drawable.image4, R.drawable.image5, R.drawable.image6
     };
 
     @Override

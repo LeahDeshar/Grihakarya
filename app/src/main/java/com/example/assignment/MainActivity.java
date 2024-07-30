@@ -32,6 +32,7 @@ import com.example.assignment.assignment2.QuizGameActivity;
 import com.example.assignment.assignment2.RectCalculateActivity;
 import com.example.assignment.assignment2.SimpleInterestActivity;
 import com.example.assignment.labassignment.Lab11Activity;
+import com.example.assignment.labassignment.Lab12Activity;
 import com.example.assignment.labassignment.LabEightActivity;
 import com.example.assignment.labassignment.LabFiveActivity;
 import com.example.assignment.labassignment.LabFourActivity;
@@ -172,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
                 return new LabTenActivity();
             case "Area of a rectangle in a custom dialog":
                 return new Lab11Activity();
+            case "Image gallery using GridView":
+                return new Lab12Activity();
 
 
             default:

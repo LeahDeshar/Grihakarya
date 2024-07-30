@@ -6,11 +6,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".labassignment.Lab12Activity">
+
+<!--    title-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Image Gallery with GridView"
+        android:textSize="24sp"
+        android:layout_marginBottom="20dp"
+
+        android:textStyle="bold"/>
     <GridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="3"
+        android:layout_below="@+id/title"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
         android:gravity="center"/>
