@@ -31,8 +31,10 @@ import com.example.assignment.assignment2.CalculatorActivity;
 import com.example.assignment.assignment2.QuizGameActivity;
 import com.example.assignment.assignment2.RectCalculateActivity;
 import com.example.assignment.assignment2.SimpleInterestActivity;
+import com.example.assignment.labassignment.LabEightActivity;
 import com.example.assignment.labassignment.LabFiveActivity;
 import com.example.assignment.labassignment.LabFourActivity;
+import com.example.assignment.labassignment.LabNineActivity;
 import com.example.assignment.labassignment.LabOneActivity;
 import com.example.assignment.labassignment.LabSevenActivity;
 import com.example.assignment.labassignment.LabSixActivity;
@@ -160,6 +162,11 @@ public class MainActivity extends AppCompatActivity {
                 return new LabSixActivity();
             case "Options menu":
                 return new LabSevenActivity();
+             case "Context menu":
+                 return new LabEightActivity();
+            case "Popup menu":
+                return new LabNineActivity();
+
 
             default:
                 Toast.makeText(this, "No Screen", Toast.LENGTH_SHORT).show();
