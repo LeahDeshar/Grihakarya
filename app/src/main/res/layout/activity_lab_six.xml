@@ -8,22 +8,33 @@
     android:padding="16dp"
     tools:context=".labassignment.LabSixActivity">
 
-
-<androidx.appcompat.widget.AppCompatButton
+<TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:textSize="20sp"
+    android:layout_marginTop="20dp"
+    android:text="Android application to get a secret message from another activity"
+/>
+    <androidx.appcompat.widget.AppCompatButton
     android:id="@+id/getMessageButton"
     android:layout_width="wrap_content"
     android:background="@drawable/button_background"
     android:paddingHorizontal="10dp"
+        android:layout_marginTop="20dp"
     android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
     android:text="Get Message"
-    android:layout_centerInParent="true"/>
+    android:layout_centerHorizontal="true"/>
 
 
     <TextView
         android:layout_below="@+id/getMessageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text"
+        android:text=""
         android:id="@+id/message"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
