@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +17,7 @@ import com.example.assignment.R;
 
 public class LabSixActivity extends AppCompatActivity {
     private Button getMessageButton;
+    private TextView message;
     private static final int REQUEST_CODE = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class LabSixActivity extends AppCompatActivity {
             return insets;
         });
         getMessageButton = findViewById(R.id.getMessageButton);
+        message = findViewById(R.id.message);
 
         getMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +46,8 @@ public class LabSixActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
             String secretMessage = data.getStringExtra("secret_message");
-            Toast.makeText(this, secretMessage, Toast.LENGTH_LONG).show();
+            message.setText(secretMessage);
+//            Toast.makeText(this, secretMessage, Toast.LENGTH_LONG).show();
         }
     }
 }

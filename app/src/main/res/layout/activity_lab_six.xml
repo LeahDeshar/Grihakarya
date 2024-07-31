@@ -17,4 +17,15 @@
     android:layout_height="wrap_content"
     android:text="Get Message"
     android:layout_centerInParent="true"/>
+
+
+    <TextView
+        android:layout_below="@+id/getMessageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text"
+        android:id="@+id/message"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        />
 </RelativeLayout>
