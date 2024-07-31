@@ -37,6 +37,7 @@ public class LabTenActivity extends AppCompatActivity {
         });
     }
     private void showAlertDialog() {
+//        alert dialog builder
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Alert Dialog Title");
         builder.setMessage("This is an example of an alert dialog.");

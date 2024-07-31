@@ -78,7 +78,7 @@ public class Lab15Activity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Post>> call, Throwable t) {
                 Toast.makeText(Lab15Activity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.e("MainActivity", "Error: " + t.getMessage(), t);
+                Log.e("Lab15Activity", "Error: " + t.getMessage(), t);
             }
         });
 
@@ -117,7 +117,7 @@ public class Lab15Activity extends AppCompatActivity {
             @Override
             public void onFailure(Call<Post> call, Throwable t) {
                 Toast.makeText(Lab15Activity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.e("MainActivity", "Error: " + t.getMessage(), t);
+                Log.e("Lab15Activity", "Error: " + t.getMessage(), t);
             }
         });
     }
