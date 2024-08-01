@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,5 +12,239 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UnitFive.UnitFiveActivity">
+    <TextView
+        android:id="@+id/question_ui_flexibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The need for UI flexibility"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_ui_flexibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UI flexibility is essential in modern applications to accommodate various screen sizes, orientations, and user preferences. Flexible UIs improve user experience by adapting to different devices and conditions, ensuring that content is displayed properly and interactively across a wide range of devices. This adaptability can be achieved through responsive layouts, fragment-based UI design, and dynamic content management."
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/question_ui_flexibility"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Question and Answer about Introduction to Fragments -->
+    <TextView
+        android:id="@+id/question_intro_fragments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introduction to fragments"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_ui_flexibility"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_intro_fragments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragments are modular sections of an activity that have their own lifecycle and can be reused in different activities. They allow for more flexible and dynamic UI design by enabling the creation of reusable UI components and managing different aspects of the UI independently. Fragments can be added, removed, or replaced during runtime to create a responsive and adaptable user interface."
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/question_intro_fragments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Question and Answer about Lifecycle of Fragment -->
+    <TextView
+        android:id="@+id/question_lifecycle_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lifecycle of Fragment"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_intro_fragments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_lifecycle_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The lifecycle of a fragment includes the following states:\n\n
+    1. onAttach() Called when the fragment is first attached to its context.\n
+    2. onCreate() Called to do the initial creation of the fragment.\n
+    3. onCreateView(): Called to create and return the view hierarchy associated with the fragment.\n
+    4. onActivityCreated(): Called when the activity's `onCreate()` has completed.\n
+    5. onStart(): Called when the fragment becomes visible to the user.\n
+    6. onResume(): Called when the fragment is visible and interacting with the user.\n
+    7. onPause(): Called when the fragment is no longer interacting with the user.\n
+    8. onStop(): Called when the fragment is no longer visible to the user.\n
+    9. inDestroyView(): Called when the view hierarchy associated with the fragment is being removed.\n
+    10. onDestroy(): Called when the fragment is no longer in use.\n
+    11. onDetach(): Called when the fragment is detached from its context."
+    android:textSize="16sp"
+    android:padding="16dp"
+    app:layout_constraintTop_toBottomOf="@id/question_lifecycle_fragment"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Question and Answer about Creating a UI Fragment -->
+    <TextView
+        android:id="@+id/question_create_ui_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Creating a UI Fragment"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_lifecycle_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_create_ui_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To create a UI fragment:\n\n
+    1. Define the Fragment Class: Create a class that extends `Fragment` and override `onCreateView()` to define the UI.\n
+    2. Create a Layout XML:Design the fragment's UI in an XML layout file.\n
+    3. Inflate the Layout: In the fragment class, inflate the XML layout in the `onCreateView()` method.\n
+    4. Add the Fragment to an Activity: Use a `FragmentManager` to add the fragment to an activity's layout dynamically or through XML.\n
+    Example:\n\n
+    public class MyFragment extends Fragment {\n
+       @Override\n
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {\n
+           return inflater.inflate(R.layout.fragment_my, container, false);\n
+       }\n
+    }\n"
+    android:textSize="16sp"
+    android:padding="16dp"
+    app:layout_constraintTop_toBottomOf="@id/question_create_ui_fragment"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Question and Answer about Creating a Fragment Class -->
+    <TextView
+        android:id="@+id/question_create_fragment_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Creating a Fragment Class"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_create_ui_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_create_fragment_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To create a fragment class:\n\n
+    1. Extend Fragment Class: Create a new class that extends `Fragment`.\n
+    2. Override Required Methods: Implement methods such as `onCreateView()` to inflate the fragment's layout and `onCreate()` for initialization.\n
+    Example:\n\n
+    public class ExampleFragment extends Fragment {\n
+        @Override\n
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {\n
+            // Inflate the layout for this fragment\n
+           return inflater.inflate(R.layout.fragment_example, container, false);\n
+        }\n
+    }\n"
+    android:textSize="16sp"
+    android:padding="16dp"
+    app:layout_constraintTop_toBottomOf="@id/question_create_fragment_class"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Question and Answer about Wiring Widgets in Fragment -->
+    <TextView
+        android:id="@+id/question_wiring_widgets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wiring widgets in Fragment"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_create_fragment_class"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_wiring_widgets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To wire widgets in a fragment:\n\n
+    1. Find Widgets: Use `findViewById()` to access widgets defined in the fragment's layout.\n
+    2. Setup Listeners: Set up event listeners for user interactions.\n
+    Example:\n\n
+    public class ExampleFragment extends Fragment {\n
+        private Button myButton;\n\n
+        @Override\n
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {\n
+            View view = inflater.inflate(R.layout.fragment_example, container, false);\n
+           myButton = view.findViewById(R.id.my_button);\n
+            myButton.setOnClickListener(v -> {\n
+                // Handle button click\n
+           });\n
+            return view;\n
+       }\n
+    }\n"
+    android:textSize="16sp"
+    android:padding="16dp"
+    app:layout_constraintTop_toBottomOf="@id/question_wiring_widgets"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Question and Answer about Introduction to Fragment Manager -->
+    <TextView
+        android:id="@+id/question_frag_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introduction to Fragment Manager"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_wiring_widgets"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_frag_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The `FragmentManager` is responsible for managing the fragments within an activity. It allows you to add, remove, replace, and manage fragments dynamically. The `FragmentManager` is used to perform transactions such as adding a fragment to a container, replacing fragments, and handling fragment back stack operations."
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/question_frag_manager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Question and Answer about the Difference between Activity and Fragments -->
+    <TextView
+        android:id="@+id/question_activity_vs_fragments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Difference between Activity and Fragments"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_frag_manager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_activity_vs_fragments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity:\n
+    1. Represents a single screen in an application.\n
+    2. Manages the entire user interface and its lifecycle.\n
+   3. Can exist independently of other activities.\n\nFragment:\n1. Represents a modular section of an activity's UI.\n2. Has its own lifecycle but is managed by an activity.\n3. Can be reused and combined within multiple activities.\n\n
+    Fragments allow for more flexible and dynamic UI design within an activity, while activities represent the main entry points into the application."
+    android:textSize="16sp"
+    android:padding="16dp"
+    app:layout_constraintTop_toBottomOf="@id/question_activity_vs_fragments"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
