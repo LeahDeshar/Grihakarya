@@ -19,6 +19,14 @@ import androidx.core.view.WindowInsetsCompat.Type;
 import androidx.core.view.WindowInsetsControllerCompat;
 import com.example.assignment.Assignment1.AssignmentDetailsActivity;
 import com.example.assignment.Hello.HelloWorldActivity;
+import com.example.assignment.Impquestions.QUnit1Activity;
+import com.example.assignment.Impquestions.QUnit2Activity;
+import com.example.assignment.Impquestions.QUnit3Activity;
+import com.example.assignment.Impquestions.QUnit4Activity;
+import com.example.assignment.Impquestions.QUnit5Activity;
+import com.example.assignment.Impquestions.QUnit6Activity;
+import com.example.assignment.Impquestions.QUnit7Activity;
+import com.example.assignment.Impquestions.QUnit8Activity;
 import com.example.assignment.UnitEight.UnitEightActivity;
 import com.example.assignment.UnitFive.UnitFiveActivity;
 import com.example.assignment.UnitFour.UnitFourActivity;
@@ -184,6 +192,22 @@ public class MainActivity extends AppCompatActivity {
                 return new Lab14Activity();
             case "Working with API":
                 return new Lab15Activity();
+            case "Q: Introduction to Mobile Programming":
+                return new QUnit1Activity();
+            case "Q: Introduction to Android Programming":
+                return new QUnit2Activity();
+            case "Q: Designing the User Interface":
+                return new QUnit3Activity();
+            case "Q: Android Activity":
+                return new QUnit4Activity();
+            case "Q: Fragments, Menus and Dialogs":
+                return new QUnit5Activity();
+            case "Q: ListView, GridView and RecyclerView":
+                return new QUnit6Activity();
+            case "Q: Advance Android Concepts":
+                return new QUnit7Activity();
+            case "Q: Introduction to iOS Programming":
+                return new QUnit8Activity();
 
             default:
                 Toast.makeText(this, "No Screen", Toast.LENGTH_SHORT).show();
