@@ -38,13 +38,25 @@ public class ExpandableListData {
         group2.add("Image gallery using RecyclerView");
         group2.add("Contact App using SQLite");
         group2.add("Working with API");
-
         group2.add("Example");
 
 //        group2.add("Item 2.3");
 
+
+        List<String> group3 = new ArrayList<>();
+        group3.add("Q: Introduction to Mobile Programming");
+        group3.add("Q: Introduction to Android Programming");
+        group3.add("Q: Designing the User Interface");
+        group3.add("Q: Android Activity");
+        group3.add("Q: Fragments, Menus and Dialogs");
+        group3.add("Q: ListView,GridView and RecyclerView");
+        group3.add("Q: Advance Android Concepts");
+        group3.add("Q: Introduction to ios Programming");
+
         expandableListDetail.put("Course", group1);
         expandableListDetail.put("Assignment", group2);
+        expandableListDetail.put("Important Question", group3);
+
 
         return expandableListDetail;
     }

@@ -17,6 +17,30 @@
         android:theme="@style/Theme.Assignment"
         tools:targetApi="31">
         <activity
+            android:name=".Impquestions.QUnit8Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Impquestions.QUnit7Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Impquestions.QUnit6Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Impquestions.QUnit5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Impquestions.QUnit4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Impquestions.QUnit3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Impquestions.QUnit2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Impquestions.QUnit1Activity"
+            android:exported="false" />
+        <activity
             android:name=".labassignment.MessageActivity"
             android:exported="false" />
         <activity
