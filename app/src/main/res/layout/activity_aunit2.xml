@@ -5,7 +5,6 @@
         android:id="@+id/main"
         android:orientation="vertical"
         android:padding="16dp">
-
         <TextView
             android:id="@+id/question_text_view"
             android:layout_width="match_parent"

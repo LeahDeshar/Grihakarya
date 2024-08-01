@@ -1,6 +1,9 @@
 package com.example.assignment.Impquestions;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -41,6 +44,23 @@ public class QUnit1Activity extends AppCompatActivity {
                 "14. Discuss the impact of mobile device hardware advancements on application development and user experience.",
                 "15. Explain the concept of mobile device management (MDM) and its importance in enterprise environments."
         };
+        String[] answers = {
+                "Answer to question 1.",
+                "Answer to question 2.",
+                "Answer to question 3.",
+                "Answer to question 4.",
+                "Answer to question 5.",
+                "Answer to question 6.",
+                "Answer to question 7.",
+                "Answer to question 8.",
+                "Answer to question 9.",
+                "Answer to question 10.",
+                "Answer to question 11.",
+                "Answer to question 12.",
+                "Answer to question 13.",
+                "Answer to question 14.",
+                "Answer to question 15."
+        };
         ListView listView = findViewById(R.id.questions_list_view);
 
         // Create an ArrayAdapter
@@ -48,5 +68,21 @@ public class QUnit1Activity extends AppCompatActivity {
 
         // Set the adapter to the ListView
         listView.setAdapter(adapter);
+
+        // Set an item click listener on the ListView
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Get the selected question and answer
+                String selectedQuestion = questions[position];
+                String selectedAnswer = answers[position];
+
+                // Create an intent to start the AnswerActivity
+                Intent intent = new Intent(QUnit1Activity.this, AUnit1Activity.class);
+                intent.putExtra("question", selectedQuestion);
+                intent.putExtra("answer", selectedAnswer);
+                startActivity(intent);
+            }
+        });
     }
 }
