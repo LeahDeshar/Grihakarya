@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:paddingHorizontal="20dp"
     tools:context=".labassignment.LabFiveActivity">
-
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -18,7 +17,6 @@
     android:id="@+id/title"
     android:text="Android application to call and save phone number using intent"
     />
-
         <EditText
             android:id="@+id/phoneEditText"
             android:layout_width="match_parent"

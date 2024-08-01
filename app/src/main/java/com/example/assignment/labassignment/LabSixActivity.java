@@ -35,8 +35,7 @@ public class LabSixActivity extends AppCompatActivity {
         getMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(LabSixActivity.this, MessageActivity.class);
-//                startActivity(intent);
+
                 Intent intent = new Intent(LabSixActivity.this, MessageActivity.class);
                 startActivityForResult(intent, REQUEST_CODE);
             }
