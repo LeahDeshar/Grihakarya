@@ -1,10 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UnitSeven.UnitSevenActivity">
 
+    <!-- Question and Answer about SQLite -->
+    <TextView
+        android:id="@+id/question_sqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What do you mean by SQLite? Explain its features."
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_sqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SQLite is a lightweight, self-contained SQL database engine that is used for storing and managing data in Android applications. It is embedded within the application and does not require a separate server process. Features of SQLite include zero configuration, full database system with SQL support, compact size, cross-platform support, and the ability to handle large databases with transactions."
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/question_sqlite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- Question and Answer about SQLite advantages and disadvantages -->
+    <TextView
+        android:id="@+id/question_sqlite_advantages_disadvantages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explain advantages and disadvantages of using SQLite."
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_sqlite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_sqlite_advantages_disadvantages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Advantages of SQLite include its lightweight nature, simplicity, no server process requirement, full-featured SQL support, and ease of setup. Disadvantages include limited concurrency support, lack of advanced features like stored procedures or triggers, and potential performance limitations with very large databases or complex queries."
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/question_sqlite_advantages_disadvantages"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Question and Answer about differentiating SQLite and SQL -->
+    <TextView
+        android:id="@+id/question_sqlite_vs_sql"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Differentiate SQLite and SQL with example."
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_sqlite_advantages_disadvantages"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_sqlite_vs_sql"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SQLite is a specific implementation of an SQL database engine, designed to be lightweight and self-contained, and does not require a separate server. SQL (Structured Query Language) is a standardized language used to manage and manipulate relational databases. For example, you can use SQL queries to interact with different types of SQL databases, like MySQL, PostgreSQL, or SQLite. While SQLite is one such database engine, SQL is the language used to interact with it and other database systems."
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/question_sqlite_vs_sql"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Question and Answer about establishing connection using SQLite -->
+    <TextView
+        android:id="@+id/question_sqlite_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How can you establish connection using SQLite in Android? Explain with the help of suitable example."
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_sqlite_vs_sql"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_sqlite_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To establish a connection using SQLite in Android, you need to create a subclass of `SQLiteOpenHelper` and use it to manage database creation and version management. Here's an example:\n\npublic class MyDatabaseHelper extends SQLiteOpenHelper {\n private static final String DATABASE_NAME = mydatabase.db;\n
+    + private static final int DATABASE_VERSION = 1;\n\npublic MyDatabaseHelper(Context context) {\n}\n\n @Override\npublic void onCreate(SQLiteDatabase db) {\n// Create table\nString CREATE_TABLE = CREATE TABLE mytable (id INTEGER PRIMARY KEY, name TEXT);\ndb.execSQL(CREATE_TABLE);\n}\n\n @Override\npublic void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {\n// Upgrade database schema\ndb.execSQL(DROP TABLE IF EXISTS mytable);\nonCreate(db);\n}\n}\n\nTo use this helper class, create an instance and call `getWritableDatabase()` or `getReadableDatabase()` methods to perform database operations."
+    android:textSize="16sp"
+    android:padding="16dp"
+    app:layout_constraintTop_toBottomOf="@id/question_sqlite_connection"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/question_sqlite_create_db_tables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explain the process of creating Database and Tables using SQLite in Android."
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/answer_sqlite_connection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/answer_sqlite_create_db_tables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To create a database and tables using SQLite in Android, follow these steps:\n\n1. **Create a subclass of `SQLiteOpenHelper`:** This class manages database creation and version management.\n\n2. **Override `onCreate(SQLiteDatabase db)`:** In this method, define SQL statements to create tables. Execute these statements using the `execSQL()` method on the `SQLiteDatabase` instance.\n\n3. **Override `onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)`:** This method handles database schema upgrades. Use it to drop and recreate tables if the database version changes.\n\nExample:\n\npublic class MyDatabaseHelper extends SQLiteOpenHelper {\nprivate static final String DATABASE_NAME = mydatabase.db;\nprivate static final int DATABASE_VERSION = 1;\n\npublic MyDatabaseHelper(Context context) {\nsuper(context, DATABASE_NAME, null, DATABASE_VERSION);\n }\n\n@Override\n public void onCreate(SQLiteDatabase db) {\n// Create table\nString CREATE_TABLE = CREATE TABLE mytable (id INTEGER PRIMARY KEY, name TEXT)\;\ndb.execSQL(CREATE_TABLE);\n}\n\n@Override\npublic void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {\n// Upgrade database schema\ndb.execSQL(DROP TABLE IF EXISTS mytable);\nonCreate(db);\n}\n}\n"
+    android:textSize="16sp"
+    android:padding="16dp"
+    app:layout_constraintTop_toBottomOf="@id/question_sqlite_create_db_tables"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
