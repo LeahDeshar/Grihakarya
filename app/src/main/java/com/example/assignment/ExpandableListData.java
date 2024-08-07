@@ -39,6 +39,7 @@ public class ExpandableListData {
         group2.add("Contact App using SQLite");
         group2.add("Working with API");
         group2.add("Search action");
+        group2.add("Sqlite example");
         group2.add("Example");
 
 //        group2.add("Item 2.3");
