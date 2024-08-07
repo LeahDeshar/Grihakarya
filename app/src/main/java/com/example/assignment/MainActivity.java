@@ -28,6 +28,7 @@ import com.example.assignment.Impquestions.QUnit5Activity;
 import com.example.assignment.Impquestions.QUnit6Activity;
 import com.example.assignment.Impquestions.QUnit7Activity;
 import com.example.assignment.Impquestions.QUnit8Activity;
+import com.example.assignment.Practice.SearchActivity;
 import com.example.assignment.UnitEight.UnitEightActivity;
 import com.example.assignment.UnitFive.UnitFiveActivity;
 import com.example.assignment.UnitFour.UnitFourActivity;
@@ -193,6 +194,8 @@ public class MainActivity extends AppCompatActivity {
                 return new Lab14Activity();
             case "Working with API":
                 return new Lab15Activity();
+            case "Search action":
+                return new SearchActivity();
 
             case "Q: Introduction to Mobile Programming":
                 return new QUnit1Activity();

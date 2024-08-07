@@ -5,11 +5,14 @@
         android:id="@+id/action_settings"
         android:title="Settings"
         android:icon="@android:drawable/ic_menu_preferences"
+
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_about"
         android:title="About"
-        app:showAsAction="never" />
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
     <item
         android:id="@+id/action_help"
         android:title="Help"

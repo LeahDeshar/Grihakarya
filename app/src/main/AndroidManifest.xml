@@ -17,6 +17,10 @@
         android:theme="@style/Theme.Assignment"
         tools:targetApi="31">
         <activity
+            android:name=".Practice.SearchActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:exported="false" />
+        <activity
             android:name=".Impquestions.AUnit8Activity"
             android:exported="false" />
         <activity
